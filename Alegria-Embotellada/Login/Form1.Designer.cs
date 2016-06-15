@@ -59,6 +59,7 @@
             // 
             // txt_User
             // 
+            this.txt_User.BackColor = System.Drawing.Color.White;
             this.txt_User.Location = new System.Drawing.Point(265, 186);
             this.txt_User.Name = "txt_User";
             this.txt_User.Size = new System.Drawing.Size(109, 20);
@@ -133,9 +134,12 @@
             this.Controls.Add(this.txt_User);
             this.Controls.Add(this.btn_Regis);
             this.Controls.Add(this.Ejem_Logo);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
