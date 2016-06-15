@@ -6,6 +6,7 @@ Historia de Modificación:   IS   -   Fecha     -  Descripcion Cambio
                            ----      ---------    ------------------------------------------------------------- 
 						   JAC       13/06/2016   Creación del script de Base de Datos dbAlegriaEmbotelladaESC
 						   DESM      15/06/2016   Se creó el usuario para el servidor
+						   DESM      15/06/2016   Se creó la Base de Datos
 ****************************************************************************************************************************/
 USE master
 GO 
@@ -24,3 +25,20 @@ ELSE
 		SELECT  @ErrorMessage AS 'Msg'
 	 END
 GO
+
+--------------------------------------------------------------------------------------------------------------------------
+
+-- CREATE DATABASE
+IF EXISTS(SELECT*FROM DBO.SYSDATABASES WHERE NAME = 'dbAlegriaEmbotelladaESC_UAT')
+   BEGIN 
+        ALTER DATABASE [dbAlegriaEmbotelladaESC_UAT] SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+		USE master
+		DROP DATABASE dbAlegriaEmbotelladaESC_UAT
+		CREATE DATABASE dbAlegriaEmbotelladaESC_UAT
+	END
+ELSE
+    BEGIN
+	     CREATE DATABASE dbAlegriaEmbotelladaESC_UAT
+	END
+GO
+
