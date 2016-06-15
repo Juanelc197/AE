@@ -7,6 +7,7 @@ Historia de Modificación:   IS   -   Fecha     -  Descripcion Cambio
 						   JAC       13/06/2016   Creación del script de Base de Datos dbAlegriaEmbotelladaESC
 						   DESM      15/06/2016   Se creó el usuario para el servidor
 						   DESM      15/06/2016   Se creó la Base de Datos
+						   DESM      15/06/2016   Se creó el usuario para la Base de Datos
 ****************************************************************************************************************************/
 USE master
 GO 
@@ -42,3 +43,27 @@ ELSE
 	END
 GO
 
+--------------------------------------------------------------------------------------------------------------------------
+
+--USE DATABASE 
+USE dbAlegriaEmbotelladaESC_UAT
+GO
+
+--DECLARE VARIABLES 
+DECLARE @ErrorMessage VARCHAR (MAX)
+
+--VIEW USERNAMES FOR DATASE ACTUALLY
+IF NOT EXISTS(SELECT uid, name, sid FROM SYSUSERS WHERE name = 'dbAlegriaEmbotelladaESC_UAT' AND islogin = 1)
+    BEGIN
+	  -- CREATE LOGIN 
+	  CREATE USER AlegriaEmbotelladaAppESC FOR LOGIN AlegriaEmbotelladaAppESC
+
+	  --ADD ROLES TO USER
+	  EXEC sp_addrolemember 'db_owner', 'AlegriaEmbotelladaAppESC'
+	  EXEC sp_addrolemember 'db_accessadmin', 'AlegriaEmbotelladaAppESC'
+END
+ELSE
+      BEGIN 
+	      SET @ErrorMessage = 'Username already exist in database'
+		  SELECT @ErrorMessage AS 'Msg'
+	  END
