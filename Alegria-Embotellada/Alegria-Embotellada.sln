@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAcces\Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{C1CD958C-F79A-4A1E-800C-272080F55005}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlegriaEmbotelladaWinFromApp", "AlegriaEmbotelladaWinFromApp\AlegriaEmbotelladaWinFromApp.csproj", "{A914A300-65BD-4AAA-8A05-E1B675C11114}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{C1CD958C-F79A-4A1E-800C-272080F55005}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1CD958C-F79A-4A1E-800C-272080F55005}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1CD958C-F79A-4A1E-800C-272080F55005}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A914A300-65BD-4AAA-8A05-E1B675C11114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A914A300-65BD-4AAA-8A05-E1B675C11114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A914A300-65BD-4AAA-8A05-E1B675C11114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A914A300-65BD-4AAA-8A05-E1B675C11114}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
