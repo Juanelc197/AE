@@ -67,3 +67,47 @@ ELSE
 	      SET @ErrorMessage = 'Username already exist in database'
 		  SELECT @ErrorMessage AS 'Msg'
 	  END
+
+--CREATE TABLES IN DATABASE
+BEGIN TRY	
+	BEGIN TRAN
+		IF EXISTS(SELECT * FROM DBO.SYSDATABASES WHERE NAME = 'dbAlegriaEmbotelladaESC_UAT')
+			BEGIN		
+				IF (EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES 
+							WHERE TABLE_SCHEMA = 'dbo' 
+							AND  TABLE_NAME = 'Country'))
+					BEGIN
+						SELECT 'Table Country already exists' AS 'Msg'
+					END
+					ELSE
+						BEGIN
+							CREATE TABLE Country
+							(
+
+							);
+						END
+						
+				COMMIT	
+				
+			END
+			ELSE
+				BEGIN
+					
+					ROLLBACK
+					
+					SET @Errormessage = 'Database not exist'
+					RAISERROR(@Errormessage,16,1);
+				END
+END TRY
+BEGIN CATCH
+	
+	SELECT  @Errormessage = 'Error: ' + CAST(ERROR_NUMBER() AS NVARCHAR) + ' -> ' + ERROR_MESSAGE() + '. Error Line: *' + CAST(ERROR_LINE() AS VARCHAR(50)) + '*.'; 
+	
+	--SELECT  @Errormessage AS Msg;
+	
+	RAISERROR(@Errormessage,16,1);
+	
+	IF(@@TRANCOUNT > 0)
+		ROLLBACK
+		
+END CATCH
