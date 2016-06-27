@@ -45,57 +45,66 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(102, 15);
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(48, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(115, 84);
+            this.pictureBox1.Size = new System.Drawing.Size(229, 135);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // lbl_1
             // 
             this.lbl_1.AutoSize = true;
-            this.lbl_1.Location = new System.Drawing.Point(126, 122);
+            this.lbl_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_1.Location = new System.Drawing.Point(98, 141);
             this.lbl_1.Name = "lbl_1";
-            this.lbl_1.Size = new System.Drawing.Size(70, 13);
+            this.lbl_1.Size = new System.Drawing.Size(136, 24);
             this.lbl_1.TabIndex = 1;
             this.lbl_1.Text = "Iniciar Sesión";
             // 
             // lbl_2
             // 
             this.lbl_2.AutoSize = true;
-            this.lbl_2.Location = new System.Drawing.Point(50, 177);
+            this.lbl_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_2.Location = new System.Drawing.Point(141, 180);
             this.lbl_2.Name = "lbl_2";
-            this.lbl_2.Size = new System.Drawing.Size(46, 13);
+            this.lbl_2.Size = new System.Drawing.Size(66, 16);
             this.lbl_2.TabIndex = 1;
             this.lbl_2.Text = "Usuario.";
             // 
             // lbl_3
             // 
             this.lbl_3.AutoSize = true;
-            this.lbl_3.Location = new System.Drawing.Point(50, 228);
+            this.lbl_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_3.Location = new System.Drawing.Point(126, 231);
             this.lbl_3.Name = "lbl_3";
-            this.lbl_3.Size = new System.Drawing.Size(64, 13);
+            this.lbl_3.Size = new System.Drawing.Size(91, 16);
             this.lbl_3.TabIndex = 1;
             this.lbl_3.Text = "Contraseña.";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(102, 170);
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(102, 199);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(115, 20);
+            this.textBox1.Size = new System.Drawing.Size(132, 20);
             this.textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(117, 221);
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(102, 250);
+            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(132, 20);
             this.textBox2.TabIndex = 2;
             // 
             // btn_Acceder
             // 
-            this.btn_Acceder.Location = new System.Drawing.Point(234, 266);
+            this.btn_Acceder.Location = new System.Drawing.Point(244, 275);
             this.btn_Acceder.Name = "btn_Acceder";
             this.btn_Acceder.Size = new System.Drawing.Size(75, 23);
             this.btn_Acceder.TabIndex = 3;
@@ -114,6 +123,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lbl_1);
             this.panel1.Controls.Add(this.btn_Acceder);
