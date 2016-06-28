@@ -8,6 +8,7 @@ Historia de Modificación:   IS   -   Fecha     -  Descripcion Cambio
 						   DESM      15/06/2016   Se creó el usuario para el servidor
 						   DESM      15/06/2016   Se creó la Base de Datos
 						   DESM      15/06/2016   Se creó el usuario para la Base de Datos
+						   JAC       27/0672016   Se Creó Las Tablas De La Base de Datos
 ****************************************************************************************************************************/
 USE master
 GO 
