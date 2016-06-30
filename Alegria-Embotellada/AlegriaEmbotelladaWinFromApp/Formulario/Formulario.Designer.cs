@@ -213,8 +213,10 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(521, 388);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "Formulario";
             this.Text = "Formulario";
+            this.TopMost = true;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
