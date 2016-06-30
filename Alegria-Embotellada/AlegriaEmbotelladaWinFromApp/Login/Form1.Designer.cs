@@ -56,7 +56,7 @@
             // 
             this.lbl_1.AutoSize = true;
             this.lbl_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_1.Location = new System.Drawing.Point(98, 141);
+            this.lbl_1.Location = new System.Drawing.Point(103, 141);
             this.lbl_1.Name = "lbl_1";
             this.lbl_1.Size = new System.Drawing.Size(136, 24);
             this.lbl_1.TabIndex = 1;
@@ -66,7 +66,8 @@
             // 
             this.lbl_2.AutoSize = true;
             this.lbl_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_2.Location = new System.Drawing.Point(141, 180);
+            this.lbl_2.ForeColor = System.Drawing.Color.White;
+            this.lbl_2.Location = new System.Drawing.Point(138, 180);
             this.lbl_2.Name = "lbl_2";
             this.lbl_2.Size = new System.Drawing.Size(66, 16);
             this.lbl_2.TabIndex = 1;
@@ -76,6 +77,7 @@
             // 
             this.lbl_3.AutoSize = true;
             this.lbl_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_3.ForeColor = System.Drawing.Color.White;
             this.lbl_3.Location = new System.Drawing.Point(126, 231);
             this.lbl_3.Name = "lbl_3";
             this.lbl_3.Size = new System.Drawing.Size(91, 16);
@@ -114,6 +116,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Location = new System.Drawing.Point(419, 369);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(55, 13);
