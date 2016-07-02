@@ -77,6 +77,16 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -86,7 +96,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -471,7 +487,18 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.AutoScroll = true;
             this.tabPage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage2.BackgroundImage")));
+            this.tabPage2.Controls.Add(this.groupBox8);
+            this.tabPage2.Controls.Add(this.groupBox9);
+            this.tabPage2.Controls.Add(this.groupBox10);
+            this.tabPage2.Controls.Add(this.groupBox11);
+            this.tabPage2.Controls.Add(this.groupBox12);
+            this.tabPage2.Controls.Add(this.pictureBox7);
+            this.tabPage2.Controls.Add(this.pictureBox8);
+            this.tabPage2.Controls.Add(this.pictureBox9);
+            this.tabPage2.Controls.Add(this.pictureBox10);
+            this.tabPage2.Controls.Add(this.pictureBox11);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -518,6 +545,99 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 0;
             // 
+            // groupBox8
+            // 
+            this.groupBox8.Location = new System.Drawing.Point(223, 462);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(429, 104);
+            this.groupBox8.TabIndex = 10;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Detalles";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.groupBox9.Location = new System.Drawing.Point(223, 352);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(429, 104);
+            this.groupBox9.TabIndex = 11;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Detalles";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.groupBox10.Location = new System.Drawing.Point(223, 242);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(429, 104);
+            this.groupBox10.TabIndex = 12;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Detalles";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.groupBox11.Location = new System.Drawing.Point(223, 132);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(429, 104);
+            this.groupBox11.TabIndex = 13;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Detalles";
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.groupBox12.Location = new System.Drawing.Point(223, 22);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(429, 104);
+            this.groupBox12.TabIndex = 14;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Detalles";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.pictureBox7.Location = new System.Drawing.Point(18, 352);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(185, 104);
+            this.pictureBox7.TabIndex = 9;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Location = new System.Drawing.Point(18, 462);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(185, 104);
+            this.pictureBox8.TabIndex = 8;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.pictureBox9.Location = new System.Drawing.Point(18, 132);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(185, 104);
+            this.pictureBox9.TabIndex = 5;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.pictureBox10.Location = new System.Drawing.Point(18, 242);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(185, 104);
+            this.pictureBox10.TabIndex = 6;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.pictureBox11.Location = new System.Drawing.Point(18, 22);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(185, 104);
+            this.pictureBox11.TabIndex = 7;
+            this.pictureBox11.TabStop = false;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -541,7 +661,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -597,5 +723,15 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox11;
     }
 }
