@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AlegriaEmbotelladaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="tb_Artículo">
+          <Key>
+            <PropertyRef Name="PK_Artículo" />
+          </Key>
+          <Property Name="PK_Artículo" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Marca" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Precio" Type="int" Nullable="false" />
+          <Property Name="Existencia" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="Presentacion" Type="int" Nullable="false" />
+          <Property Name="FK_Proveedor" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_Consumidor">
+          <Key>
+            <PropertyRef Name="PK_Consumidor" />
+          </Key>
+          <Property Name="PK_Consumidor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Primer_Nombre" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Primer_Apellido" Type="varchar" MaxLength="15" />
+          <Property Name="edad" Type="int" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="FK_Usuario" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_Login">
+          <Key>
+            <PropertyRef Name="PK_Usuario" />
+          </Key>
+          <Property Name="PK_Usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="PASSWORD" Type="varchar" MaxLength="16" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_Promoción">
+          <Key>
+            <PropertyRef Name="PK_Promoción" />
+          </Key>
+          <Property Name="PK_Promoción" Type="int" Nullable="false" />
+          <Property Name="Dia_Inicio" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Dia_Finalización" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="FK_Sucursal" Type="int" Nullable="false" />
+          <Property Name="FK_Artículo" Type="int" Nullable="false" />
+          <Property Name="Descripción" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Cantidad_Artículo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_Proveedor">
+          <Key>
+            <PropertyRef Name="PK_Proveedor" />
+          </Key>
+          <Property Name="PK_Proveedor" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Teléfono" Type="varchar" MaxLength="20" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tb_Sucursal">
+          <Key>
+            <PropertyRef Name="PK_Sucursal" />
+          </Key>
+          <Property Name="PK_Sucursal" Type="int" Nullable="false" />
+          <Property Name="Nombre_Sucursal" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Calle" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Número" Type="int" Nullable="false" />
+          <Property Name="Colonia" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="FK_Promoción" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="cod_Articulo">
+          <End Role="tb_Artículo" Type="Self.tb_Artículo" Multiplicity="1" />
+          <End Role="tb_Promoción" Type="Self.tb_Promoción" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_Artículo">
+              <PropertyRef Name="PK_Artículo" />
+            </Principal>
+            <Dependent Role="tb_Promoción">
+              <PropertyRef Name="FK_Artículo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="cod_sucursal">
+          <End Role="tb_Sucursal" Type="Self.tb_Sucursal" Multiplicity="1" />
+          <End Role="tb_Promoción" Type="Self.tb_Promoción" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_Sucursal">
+              <PropertyRef Name="PK_Sucursal" />
+            </Principal>
+            <Dependent Role="tb_Promoción">
+              <PropertyRef Name="FK_Sucursal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="cod_Usuario">
+          <End Role="tb_Login" Type="Self.tb_Login" Multiplicity="1" />
+          <End Role="tb_Consumidor" Type="Self.tb_Consumidor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_Login">
+              <PropertyRef Name="PK_Usuario" />
+            </Principal>
+            <Dependent Role="tb_Consumidor">
+              <PropertyRef Name="FK_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="id_Proveedor">
+          <End Role="tb_Proveedor" Type="Self.tb_Proveedor" Multiplicity="1" />
+          <End Role="tb_Artículo" Type="Self.tb_Artículo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_Proveedor">
+              <PropertyRef Name="PK_Proveedor" />
+            </Principal>
+            <Dependent Role="tb_Artículo">
+              <PropertyRef Name="FK_Proveedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AlegriaEmbotelladaModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_Artículo" EntityType="Self.tb_Artículo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_Consumidor" EntityType="Self.tb_Consumidor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_Login" EntityType="Self.tb_Login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_Promoción" EntityType="Self.tb_Promoción" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_Proveedor" EntityType="Self.tb_Proveedor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_Sucursal" EntityType="Self.tb_Sucursal" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="cod_Articulo" Association="Self.cod_Articulo">
+            <End Role="tb_Artículo" EntitySet="tb_Artículo" />
+            <End Role="tb_Promoción" EntitySet="tb_Promoción" />
+          </AssociationSet>
+          <AssociationSet Name="cod_sucursal" Association="Self.cod_sucursal">
+            <End Role="tb_Sucursal" EntitySet="tb_Sucursal" />
+            <End Role="tb_Promoción" EntitySet="tb_Promoción" />
+          </AssociationSet>
+          <AssociationSet Name="cod_Usuario" Association="Self.cod_Usuario">
+            <End Role="tb_Login" EntitySet="tb_Login" />
+            <End Role="tb_Consumidor" EntitySet="tb_Consumidor" />
+          </AssociationSet>
+          <AssociationSet Name="id_Proveedor" Association="Self.id_Proveedor">
+            <End Role="tb_Proveedor" EntitySet="tb_Proveedor" />
+            <End Role="tb_Artículo" EntitySet="tb_Artículo" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AlegriaEmbotelladaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tb_Artículo">
+          <Key>
+            <PropertyRef Name="PK_Artículo" />
+          </Key>
+          <Property Name="PK_Artículo" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Marca" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Precio" Type="Int32" Nullable="false" />
+          <Property Name="Existencia" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Presentacion" Type="Int32" Nullable="false" />
+          <Property Name="FK_Proveedor" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tb_Promoción" Relationship="Self.cod_Articulo" FromRole="tb_Artículo" ToRole="tb_Promoción" />
+          <NavigationProperty Name="tb_Proveedor" Relationship="Self.id_Proveedor" FromRole="tb_Artículo" ToRole="tb_Proveedor" />
+        </EntityType>
+        <EntityType Name="tb_Consumidor">
+          <Key>
+            <PropertyRef Name="PK_Consumidor" />
+          </Key>
+          <Property Name="PK_Consumidor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Primer_Nombre" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Primer_Apellido" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="edad" Type="Int32" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FK_Usuario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tb_Login" Relationship="Self.cod_Usuario" FromRole="tb_Consumidor" ToRole="tb_Login" />
+        </EntityType>
+        <EntityType Name="tb_Login">
+          <Key>
+            <PropertyRef Name="PK_Usuario" />
+          </Key>
+          <Property Name="PK_Usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PASSWORD" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_Consumidor" Relationship="Self.cod_Usuario" FromRole="tb_Login" ToRole="tb_Consumidor" />
+        </EntityType>
+        <EntityType Name="tb_Promoción">
+          <Key>
+            <PropertyRef Name="PK_Promoción" />
+          </Key>
+          <Property Name="PK_Promoción" Type="Int32" Nullable="false" />
+          <Property Name="Dia_Inicio" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Dia_Finalización" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FK_Sucursal" Type="Int32" Nullable="false" />
+          <Property Name="FK_Artículo" Type="Int32" Nullable="false" />
+          <Property Name="Descripción" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cantidad_Artículo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tb_Artículo" Relationship="Self.cod_Articulo" FromRole="tb_Promoción" ToRole="tb_Artículo" />
+          <NavigationProperty Name="tb_Sucursal" Relationship="Self.cod_sucursal" FromRole="tb_Promoción" ToRole="tb_Sucursal" />
+        </EntityType>
+        <EntityType Name="tb_Proveedor">
+          <Key>
+            <PropertyRef Name="PK_Proveedor" />
+          </Key>
+          <Property Name="PK_Proveedor" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Teléfono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_Artículo" Relationship="Self.id_Proveedor" FromRole="tb_Proveedor" ToRole="tb_Artículo" />
+        </EntityType>
+        <EntityType Name="tb_Sucursal">
+          <Key>
+            <PropertyRef Name="PK_Sucursal" />
+          </Key>
+          <Property Name="PK_Sucursal" Type="Int32" Nullable="false" />
+          <Property Name="Nombre_Sucursal" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Calle" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Número" Type="Int32" Nullable="false" />
+          <Property Name="Colonia" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FK_Promoción" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tb_Promoción" Relationship="Self.cod_sucursal" FromRole="tb_Sucursal" ToRole="tb_Promoción" />
+        </EntityType>
+        <Association Name="cod_Articulo">
+          <End Role="tb_Artículo" Type="Self.tb_Artículo" Multiplicity="1" />
+          <End Role="tb_Promoción" Type="Self.tb_Promoción" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_Artículo">
+              <PropertyRef Name="PK_Artículo" />
+            </Principal>
+            <Dependent Role="tb_Promoción">
+              <PropertyRef Name="FK_Artículo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="id_Proveedor">
+          <End Role="tb_Proveedor" Type="Self.tb_Proveedor" Multiplicity="1" />
+          <End Role="tb_Artículo" Type="Self.tb_Artículo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_Proveedor">
+              <PropertyRef Name="PK_Proveedor" />
+            </Principal>
+            <Dependent Role="tb_Artículo">
+              <PropertyRef Name="FK_Proveedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="cod_Usuario">
+          <End Role="tb_Login" Type="Self.tb_Login" Multiplicity="1" />
+          <End Role="tb_Consumidor" Type="Self.tb_Consumidor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_Login">
+              <PropertyRef Name="PK_Usuario" />
+            </Principal>
+            <Dependent Role="tb_Consumidor">
+              <PropertyRef Name="FK_Usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="cod_sucursal">
+          <End Role="tb_Sucursal" Type="Self.tb_Sucursal" Multiplicity="1" />
+          <End Role="tb_Promoción" Type="Self.tb_Promoción" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_Sucursal">
+              <PropertyRef Name="PK_Sucursal" />
+            </Principal>
+            <Dependent Role="tb_Promoción">
+              <PropertyRef Name="FK_Sucursal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AlegriaEmbotelladaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="tb_Artículo" EntityType="Self.tb_Artículo" />
+          <EntitySet Name="tb_Consumidor" EntityType="Self.tb_Consumidor" />
+          <EntitySet Name="tb_Login" EntityType="Self.tb_Login" />
+          <EntitySet Name="tb_Promoción" EntityType="Self.tb_Promoción" />
+          <EntitySet Name="tb_Proveedor" EntityType="Self.tb_Proveedor" />
+          <EntitySet Name="tb_Sucursal" EntityType="Self.tb_Sucursal" />
+          <AssociationSet Name="cod_Articulo" Association="Self.cod_Articulo">
+            <End Role="tb_Artículo" EntitySet="tb_Artículo" />
+            <End Role="tb_Promoción" EntitySet="tb_Promoción" />
+          </AssociationSet>
+          <AssociationSet Name="id_Proveedor" Association="Self.id_Proveedor">
+            <End Role="tb_Proveedor" EntitySet="tb_Proveedor" />
+            <End Role="tb_Artículo" EntitySet="tb_Artículo" />
+          </AssociationSet>
+          <AssociationSet Name="cod_Usuario" Association="Self.cod_Usuario">
+            <End Role="tb_Login" EntitySet="tb_Login" />
+            <End Role="tb_Consumidor" EntitySet="tb_Consumidor" />
+          </AssociationSet>
+          <AssociationSet Name="cod_sucursal" Association="Self.cod_sucursal">
+            <End Role="tb_Sucursal" EntitySet="tb_Sucursal" />
+            <End Role="tb_Promoción" EntitySet="tb_Promoción" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AlegriaEmbotelladaModelStoreContainer" CdmEntityContainer="AlegriaEmbotelladaEntities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="AlegriaEmbotelladaModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Artículo">
+            <EntityTypeMapping TypeName="AlegriaEmbotelladaModel.tb_Artículo">
+              <MappingFragment StoreEntitySet="tb_Artículo">
+                <ScalarProperty Name="PK_Artículo" ColumnName="PK_Artículo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Marca" ColumnName="Marca" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="Existencia" ColumnName="Existencia" />
+                <ScalarProperty Name="Presentacion" ColumnName="Presentacion" />
+                <ScalarProperty Name="FK_Proveedor" ColumnName="FK_Proveedor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Consumidor">
+            <EntityTypeMapping TypeName="AlegriaEmbotelladaModel.tb_Consumidor">
+              <MappingFragment StoreEntitySet="tb_Consumidor">
+                <ScalarProperty Name="PK_Consumidor" ColumnName="PK_Consumidor" />
+                <ScalarProperty Name="Primer_Nombre" ColumnName="Primer_Nombre" />
+                <ScalarProperty Name="Primer_Apellido" ColumnName="Primer_Apellido" />
+                <ScalarProperty Name="edad" ColumnName="edad" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="FK_Usuario" ColumnName="FK_Usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Login">
+            <EntityTypeMapping TypeName="AlegriaEmbotelladaModel.tb_Login">
+              <MappingFragment StoreEntitySet="tb_Login">
+                <ScalarProperty Name="PK_Usuario" ColumnName="PK_Usuario" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Promoción">
+            <EntityTypeMapping TypeName="AlegriaEmbotelladaModel.tb_Promoción">
+              <MappingFragment StoreEntitySet="tb_Promoción">
+                <ScalarProperty Name="PK_Promoción" ColumnName="PK_Promoción" />
+                <ScalarProperty Name="Dia_Inicio" ColumnName="Dia_Inicio" />
+                <ScalarProperty Name="Dia_Finalización" ColumnName="Dia_Finalización" />
+                <ScalarProperty Name="FK_Sucursal" ColumnName="FK_Sucursal" />
+                <ScalarProperty Name="FK_Artículo" ColumnName="FK_Artículo" />
+                <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+                <ScalarProperty Name="Cantidad_Artículo" ColumnName="Cantidad_Artículo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Proveedor">
+            <EntityTypeMapping TypeName="AlegriaEmbotelladaModel.tb_Proveedor">
+              <MappingFragment StoreEntitySet="tb_Proveedor">
+                <ScalarProperty Name="PK_Proveedor" ColumnName="PK_Proveedor" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Teléfono" ColumnName="Teléfono" />
+                <ScalarProperty Name="email" ColumnName="email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Sucursal">
+            <EntityTypeMapping TypeName="AlegriaEmbotelladaModel.tb_Sucursal">
+              <MappingFragment StoreEntitySet="tb_Sucursal">
+                <ScalarProperty Name="PK_Sucursal" ColumnName="PK_Sucursal" />
+                <ScalarProperty Name="Nombre_Sucursal" ColumnName="Nombre_Sucursal" />
+                <ScalarProperty Name="Calle" ColumnName="Calle" />
+                <ScalarProperty Name="Número" ColumnName="Número" />
+                <ScalarProperty Name="Colonia" ColumnName="Colonia" />
+                <ScalarProperty Name="FK_Promoción" ColumnName="FK_Promoción" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

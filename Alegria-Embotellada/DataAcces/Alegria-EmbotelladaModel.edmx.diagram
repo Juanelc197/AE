@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6b6811c66f2d4ddfb3074acb50687dbe" Name="Diagram1">
+        <EntityTypeShape EntityType="AlegriaEmbotelladaModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlegriaEmbotelladaModel.tb_Artículo" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlegriaEmbotelladaModel.tb_Consumidor" Width="1.5" PointX="8" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlegriaEmbotelladaModel.tb_Login" Width="1.5" PointX="5.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlegriaEmbotelladaModel.tb_Promoción" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlegriaEmbotelladaModel.tb_Proveedor" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlegriaEmbotelladaModel.tb_Sucursal" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <AssociationConnector Association="AlegriaEmbotelladaModel.cod_Articulo" ManuallyRouted="false" />
+        <AssociationConnector Association="AlegriaEmbotelladaModel.id_Proveedor" ManuallyRouted="false" />
+        <AssociationConnector Association="AlegriaEmbotelladaModel.cod_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="AlegriaEmbotelladaModel.cod_sucursal" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
