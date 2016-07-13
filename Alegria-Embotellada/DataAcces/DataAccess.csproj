@@ -66,7 +66,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AlegriaEmbotelladaModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="LoginDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sysdiagram.cs">
       <DependentUpon>AlegriaEmbotelladaModel.tt</DependentUpon>
@@ -74,21 +73,27 @@
     <Compile Include="tb_Artículo.cs">
       <DependentUpon>AlegriaEmbotelladaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="tb_ArtículoDAL.cs" />
+    <Compile Include="tb_ConsumidoDAL.cs" />
     <Compile Include="tb_Consumidor.cs">
       <DependentUpon>AlegriaEmbotelladaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="tb_Login.cs">
       <DependentUpon>AlegriaEmbotelladaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="tb_LoginDAL.cs" />
     <Compile Include="tb_Promoción.cs">
       <DependentUpon>AlegriaEmbotelladaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="tb_PromociónDAL.cs" />
     <Compile Include="tb_Proveedor.cs">
       <DependentUpon>AlegriaEmbotelladaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="tb_ProveedorDAL.cs" />
     <Compile Include="tb_Sucursal.cs">
       <DependentUpon>AlegriaEmbotelladaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="tb_SucursalDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
