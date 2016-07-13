@@ -109,10 +109,6 @@
       <Project>{4ebbf9e3-9c7c-4d68-bd2b-919b61c51fbc}</Project>
       <Name>BusinessLogic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Entities\Entities.csproj">
-      <Project>{c1cd958c-f79a-4a1e-800c-272080f55005}</Project>
-      <Name>Entities</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\AlegriaEmbotelladaWinFromApp.vshost.exe" />

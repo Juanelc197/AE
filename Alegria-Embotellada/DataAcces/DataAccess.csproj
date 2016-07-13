@@ -51,46 +51,69 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alegria-EmbotelladaModel.Context.cs">
+    <Compile Include="AlegriaEmbotelladaModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Alegria-EmbotelladaModel.Context.tt</DependentUpon>
+      <DependentUpon>AlegriaEmbotelladaModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Alegria-EmbotelladaModel.Designer.cs">
+    <Compile Include="AlegriaEmbotelladaModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Alegria-EmbotelladaModel.edmx</DependentUpon>
+      <DependentUpon>AlegriaEmbotelladaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="AlegriaEmbotelladaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlegriaEmbotelladaModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Entities\Entities.csproj">
-      <Project>{c1cd958c-f79a-4a1e-800c-272080f55005}</Project>
-      <Name>Entities</Name>
-    </ProjectReference>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>AlegriaEmbotelladaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Artículo.cs">
+      <DependentUpon>AlegriaEmbotelladaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Consumidor.cs">
+      <DependentUpon>AlegriaEmbotelladaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Login.cs">
+      <DependentUpon>AlegriaEmbotelladaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Promoción.cs">
+      <DependentUpon>AlegriaEmbotelladaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Proveedor.cs">
+      <DependentUpon>AlegriaEmbotelladaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_Sucursal.cs">
+      <DependentUpon>AlegriaEmbotelladaModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Alegria-EmbotelladaModel.edmx">
+    <EntityDeploy Include="AlegriaEmbotelladaModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Alegria-EmbotelladaModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>AlegriaEmbotelladaModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Alegria-EmbotelladaModel.edmx.diagram">
-      <DependentUpon>Alegria-EmbotelladaModel.edmx</DependentUpon>
+    <None Include="AlegriaEmbotelladaModel.edmx.diagram">
+      <DependentUpon>AlegriaEmbotelladaModel.edmx</DependentUpon>
     </None>
     <None Include="App.Config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Alegria-EmbotelladaModel.Context.tt">
+    <Content Include="AlegriaEmbotelladaModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Alegria-EmbotelladaModel.edmx</DependentUpon>
-      <LastGenOutput>Alegria-EmbotelladaModel.Context.cs</LastGenOutput>
-      <CustomToolNamespace>Entities</CustomToolNamespace>
+      <DependentUpon>AlegriaEmbotelladaModel.edmx</DependentUpon>
+      <LastGenOutput>AlegriaEmbotelladaModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="AlegriaEmbotelladaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AlegriaEmbotelladaModel.edmx</DependentUpon>
+      <LastGenOutput>AlegriaEmbotelladaModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
