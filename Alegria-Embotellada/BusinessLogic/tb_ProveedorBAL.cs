@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAcces
+namespace BusinessLogic
 {
-   public  class tb_ProveedorDAL
+    public class tb_ProveedorBAL
     {
-       
     }
 }

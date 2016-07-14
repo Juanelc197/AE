@@ -41,6 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tb_ArtículoBAL.cs" />
+    <Compile Include="tb_ConsumidoBAL.cs" />
+    <Compile Include="tb_LoginBAL.cs" />
+    <Compile Include="tb_PromociónBAL.cs" />
+    <Compile Include="tb_ProveedorBAL.cs" />
+    <Compile Include="tb_SucursalBAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAcces\DataAccess.csproj">
