@@ -67,7 +67,7 @@
             this.lbl_2.AutoSize = true;
             this.lbl_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_2.ForeColor = System.Drawing.Color.White;
-            this.lbl_2.Location = new System.Drawing.Point(138, 180);
+            this.lbl_2.Location = new System.Drawing.Point(138, 169);
             this.lbl_2.Name = "lbl_2";
             this.lbl_2.Size = new System.Drawing.Size(66, 16);
             this.lbl_2.TabIndex = 1;
@@ -78,7 +78,7 @@
             this.lbl_3.AutoSize = true;
             this.lbl_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_3.ForeColor = System.Drawing.Color.White;
-            this.lbl_3.Location = new System.Drawing.Point(126, 231);
+            this.lbl_3.Location = new System.Drawing.Point(126, 220);
             this.lbl_3.Name = "lbl_3";
             this.lbl_3.Size = new System.Drawing.Size(91, 16);
             this.lbl_3.TabIndex = 1;
@@ -88,7 +88,8 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(102, 201);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(102, 190);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(132, 20);
@@ -98,7 +99,8 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(102, 250);
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(102, 239);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(132, 20);
@@ -106,7 +108,11 @@
             // 
             // btn_Acceder
             // 
-            this.btn_Acceder.Location = new System.Drawing.Point(244, 275);
+            this.btn_Acceder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btn_Acceder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.btn_Acceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Acceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Acceder.Location = new System.Drawing.Point(131, 275);
             this.btn_Acceder.Name = "btn_Acceder";
             this.btn_Acceder.Size = new System.Drawing.Size(75, 23);
             this.btn_Acceder.TabIndex = 3;
@@ -134,7 +140,7 @@
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.lbl_3);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(75, 12);
+            this.panel1.Location = new System.Drawing.Point(80, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(322, 301);
             this.panel1.TabIndex = 5;
@@ -148,7 +154,7 @@
             this.ClientSize = new System.Drawing.Size(486, 391);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.linkLabel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Login";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
