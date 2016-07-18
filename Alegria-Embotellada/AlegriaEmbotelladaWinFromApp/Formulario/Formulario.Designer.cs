@@ -89,9 +89,9 @@
             this.lbl_email.ForeColor = System.Drawing.Color.Black;
             this.lbl_email.Location = new System.Drawing.Point(144, 263);
             this.lbl_email.Name = "lbl_email";
-            this.lbl_email.Size = new System.Drawing.Size(54, 18);
+            this.lbl_email.Size = new System.Drawing.Size(50, 18);
             this.lbl_email.TabIndex = 3;
-            this.lbl_email.Text = "E-mail.";
+            this.lbl_email.Text = "E-mail";
             // 
             // lbl_Apellido
             // 
@@ -221,11 +221,11 @@
             // lbl_Formulario
             // 
             this.lbl_Formulario.AutoSize = true;
-            this.lbl_Formulario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Formulario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Formulario.ForeColor = System.Drawing.Color.Black;
             this.lbl_Formulario.Location = new System.Drawing.Point(68, 20);
             this.lbl_Formulario.Name = "lbl_Formulario";
-            this.lbl_Formulario.Size = new System.Drawing.Size(198, 18);
+            this.lbl_Formulario.Size = new System.Drawing.Size(215, 20);
             this.lbl_Formulario.TabIndex = 12;
             this.lbl_Formulario.Text = "Ingresa tus datos personales";
             // 

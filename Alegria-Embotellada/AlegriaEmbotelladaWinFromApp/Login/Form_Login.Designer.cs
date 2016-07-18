@@ -69,9 +69,9 @@
             this.lbl_2.ForeColor = System.Drawing.Color.Black;
             this.lbl_2.Location = new System.Drawing.Point(138, 169);
             this.lbl_2.Name = "lbl_2";
-            this.lbl_2.Size = new System.Drawing.Size(66, 16);
+            this.lbl_2.Size = new System.Drawing.Size(62, 16);
             this.lbl_2.TabIndex = 1;
-            this.lbl_2.Text = "Usuario.";
+            this.lbl_2.Text = "Usuario";
             // 
             // lbl_3
             // 
@@ -80,9 +80,9 @@
             this.lbl_3.ForeColor = System.Drawing.Color.Black;
             this.lbl_3.Location = new System.Drawing.Point(126, 220);
             this.lbl_3.Name = "lbl_3";
-            this.lbl_3.Size = new System.Drawing.Size(91, 16);
+            this.lbl_3.Size = new System.Drawing.Size(87, 16);
             this.lbl_3.TabIndex = 1;
-            this.lbl_3.Text = "Contraseña.";
+            this.lbl_3.Text = "Contraseña";
             // 
             // txt_Usuario
             // 
@@ -122,10 +122,10 @@
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Location = new System.Drawing.Point(420, 369);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(57, 13);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Registrate";
+            this.linkLabel1.Text = "Regístrate";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // panel1
