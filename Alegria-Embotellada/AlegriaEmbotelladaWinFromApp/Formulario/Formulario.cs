@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,13 +18,40 @@ namespace AlegriaEmbotelladaWinFromApp.Formulario
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btn_Cancelar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void btn_Aceptar_Click(object sender, EventArgs e)
         {
+            DataAcces.tb_Login login = new DataAcces.tb_Login();
+            login.PASSWORD = txtContraseña.Text;
+            login.UserName = txtUsario.Text;
+            DataAcces.tb_Consumidor consumidor = new DataAcces.tb_Consumidor();
+            consumidor.email = txtemail.Text;
+            consumidor.Primer_Nombre = txtnombre.Text;
+            consumidor.Primer_Apellido = txtapellido.Text;
+            consumidor.edad = Convert.ToInt32(txtedad.Text);
+            bool IsInsert = tb_LoginBAL.IngresarDatos(login);
+            if (IsInsert)
+            {
+                MessageBox.Show("Sea Registrado Correctamente");
+            }
+            else
+            {
+                MessageBox.Show("Favor de ingresar Todos los campos");
+            }
+
+            bool IsInsert1 = tb_ConsumidoBAL.IngresarDatosConsumidor(consumidor);
+            if (IsInsert1)
+            {
+                MessageBox.Show("Sea Registrado Correctamente");
+            }
+            else
+            {
+                MessageBox.Show("Favor de ingresar Todos los campos");
+            }
 
         }
     }

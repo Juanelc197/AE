@@ -31,18 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formulario));
             this.lbl_Usuario = new System.Windows.Forms.Label();
             this.lbl_Contraseña = new System.Windows.Forms.Label();
-            this.lbl_Confi_Con = new System.Windows.Forms.Label();
+            this.lb_Nombre = new System.Windows.Forms.Label();
             this.lbl_email = new System.Windows.Forms.Label();
-            this.lbl_Curp = new System.Windows.Forms.Label();
+            this.lbl_Apellido = new System.Windows.Forms.Label();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.btn_Aceptar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtUsario = new System.Windows.Forms.TextBox();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.txtemail = new System.Windows.Forms.TextBox();
+            this.txtapellido = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_Formulario = new System.Windows.Forms.Label();
+            this.txtedad = new System.Windows.Forms.TextBox();
+            this.lblEdad = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,162 +52,182 @@
             // 
             this.lbl_Usuario.AutoSize = true;
             this.lbl_Usuario.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Usuario.Font = new System.Drawing.Font("Adobe Heiti Std R", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbl_Usuario.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Usuario.Location = new System.Drawing.Point(105, 62);
+            this.lbl_Usuario.Location = new System.Drawing.Point(138, 65);
             this.lbl_Usuario.Name = "lbl_Usuario";
-            this.lbl_Usuario.Size = new System.Drawing.Size(61, 19);
+            this.lbl_Usuario.Size = new System.Drawing.Size(60, 18);
             this.lbl_Usuario.TabIndex = 0;
             this.lbl_Usuario.Text = "Usuario";
             // 
             // lbl_Contraseña
             // 
             this.lbl_Contraseña.AutoSize = true;
-            this.lbl_Contraseña.Font = new System.Drawing.Font("Adobe Heiti Std R", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbl_Contraseña.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Contraseña.Location = new System.Drawing.Point(93, 112);
+            this.lbl_Contraseña.Location = new System.Drawing.Point(126, 115);
             this.lbl_Contraseña.Name = "lbl_Contraseña";
-            this.lbl_Contraseña.Size = new System.Drawing.Size(86, 19);
+            this.lbl_Contraseña.Size = new System.Drawing.Size(85, 18);
             this.lbl_Contraseña.TabIndex = 1;
             this.lbl_Contraseña.Text = "Contraseña";
-            this.lbl_Contraseña.Click += new System.EventHandler(this.label2_Click);
             // 
-            // lbl_Confi_Con
+            // lb_Nombre
             // 
-            this.lbl_Confi_Con.AutoSize = true;
-            this.lbl_Confi_Con.Font = new System.Drawing.Font("Adobe Heiti Std R", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_Confi_Con.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Confi_Con.Location = new System.Drawing.Point(58, 160);
-            this.lbl_Confi_Con.Name = "lbl_Confi_Con";
-            this.lbl_Confi_Con.Size = new System.Drawing.Size(157, 19);
-            this.lbl_Confi_Con.TabIndex = 2;
-            this.lbl_Confi_Con.Text = "Confirmar contraseña";
+            this.lb_Nombre.AutoSize = true;
+            this.lb_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lb_Nombre.ForeColor = System.Drawing.Color.Black;
+            this.lb_Nombre.Location = new System.Drawing.Point(136, 164);
+            this.lb_Nombre.Name = "lb_Nombre";
+            this.lb_Nombre.Size = new System.Drawing.Size(62, 18);
+            this.lb_Nombre.TabIndex = 2;
+            this.lb_Nombre.Text = "Nombre";
             // 
             // lbl_email
             // 
             this.lbl_email.AutoSize = true;
-            this.lbl_email.Font = new System.Drawing.Font("Adobe Heiti Std R", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbl_email.ForeColor = System.Drawing.Color.Black;
-            this.lbl_email.Location = new System.Drawing.Point(110, 208);
+            this.lbl_email.Location = new System.Drawing.Point(144, 263);
             this.lbl_email.Name = "lbl_email";
-            this.lbl_email.Size = new System.Drawing.Size(56, 19);
+            this.lbl_email.Size = new System.Drawing.Size(54, 18);
             this.lbl_email.TabIndex = 3;
             this.lbl_email.Text = "E-mail.";
             // 
-            // lbl_Curp
+            // lbl_Apellido
             // 
-            this.lbl_Curp.AutoSize = true;
-            this.lbl_Curp.Font = new System.Drawing.Font("Adobe Heiti Std R", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Curp.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Curp.Location = new System.Drawing.Point(106, 261);
-            this.lbl_Curp.Name = "lbl_Curp";
-            this.lbl_Curp.Size = new System.Drawing.Size(62, 19);
-            this.lbl_Curp.TabIndex = 4;
-            this.lbl_Curp.Text = "C.U.R.P.";
-            this.lbl_Curp.Click += new System.EventHandler(this.label5_Click);
+            this.lbl_Apellido.AutoSize = true;
+            this.lbl_Apellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Apellido.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Apellido.Location = new System.Drawing.Point(138, 217);
+            this.lbl_Apellido.Name = "lbl_Apellido";
+            this.lbl_Apellido.Size = new System.Drawing.Size(59, 18);
+            this.lbl_Apellido.TabIndex = 4;
+            this.lbl_Apellido.Text = "Apellido";
             // 
             // btn_Cancelar
             // 
             this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancelar.Location = new System.Drawing.Point(195, 327);
+            this.btn_Cancelar.Location = new System.Drawing.Point(218, 402);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(75, 35);
             this.btn_Cancelar.TabIndex = 5;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // btn_Aceptar
             // 
-            this.btn_Aceptar.Font = new System.Drawing.Font("Adobe Heiti Std R", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Aceptar.Location = new System.Drawing.Point(3, 326);
+            this.btn_Aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Aceptar.Location = new System.Drawing.Point(26, 401);
             this.btn_Aceptar.Name = "btn_Aceptar";
             this.btn_Aceptar.Size = new System.Drawing.Size(75, 35);
             this.btn_Aceptar.TabIndex = 6;
             this.btn_Aceptar.Text = "Aceptar";
             this.btn_Aceptar.UseVisualStyleBackColor = true;
+            this.btn_Aceptar.Click += new System.EventHandler(this.btn_Aceptar_Click);
             // 
-            // textBox1
+            // txtUsario
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(55, 84);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtUsario.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtUsario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsario.Location = new System.Drawing.Point(88, 87);
+            this.txtUsario.Multiline = true;
+            this.txtUsario.Name = "txtUsario";
+            this.txtUsario.Size = new System.Drawing.Size(161, 20);
+            this.txtUsario.TabIndex = 7;
             // 
-            // textBox2
+            // txtContraseña
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(55, 134);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(161, 20);
-            this.textBox2.TabIndex = 8;
+            this.txtContraseña.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContraseña.Location = new System.Drawing.Point(88, 137);
+            this.txtContraseña.Multiline = true;
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(161, 20);
+            this.txtContraseña.TabIndex = 8;
             // 
-            // textBox3
+            // txtnombre
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(55, 182);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(161, 20);
-            this.textBox3.TabIndex = 9;
+            this.txtnombre.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtnombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtnombre.Location = new System.Drawing.Point(88, 185);
+            this.txtnombre.Multiline = true;
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(161, 20);
+            this.txtnombre.TabIndex = 9;
             // 
-            // textBox4
+            // txtemail
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(54, 230);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(161, 20);
-            this.textBox4.TabIndex = 10;
+            this.txtemail.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtemail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtemail.Location = new System.Drawing.Point(88, 285);
+            this.txtemail.Multiline = true;
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(161, 20);
+            this.txtemail.TabIndex = 10;
             // 
-            // textBox5
+            // txtapellido
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(54, 279);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(161, 20);
-            this.textBox5.TabIndex = 11;
+            this.txtapellido.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtapellido.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtapellido.Location = new System.Drawing.Point(86, 235);
+            this.txtapellido.Multiline = true;
+            this.txtapellido.Name = "txtapellido";
+            this.txtapellido.Size = new System.Drawing.Size(161, 20);
+            this.txtapellido.TabIndex = 11;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lblEdad);
+            this.panel1.Controls.Add(this.txtedad);
             this.panel1.Controls.Add(this.lbl_Formulario);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtUsario);
             this.panel1.Controls.Add(this.btn_Cancelar);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.txtapellido);
             this.panel1.Controls.Add(this.btn_Aceptar);
             this.panel1.Controls.Add(this.lbl_Usuario);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.txtemail);
             this.panel1.Controls.Add(this.lbl_Contraseña);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.lbl_Confi_Con);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtnombre);
+            this.panel1.Controls.Add(this.lb_Nombre);
+            this.panel1.Controls.Add(this.txtContraseña);
             this.panel1.Controls.Add(this.lbl_email);
-            this.panel1.Controls.Add(this.lbl_Curp);
-            this.panel1.Location = new System.Drawing.Point(122, 12);
+            this.panel1.Controls.Add(this.lbl_Apellido);
+            this.panel1.Location = new System.Drawing.Point(112, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(275, 364);
+            this.panel1.Size = new System.Drawing.Size(334, 455);
             this.panel1.TabIndex = 12;
             // 
             // lbl_Formulario
             // 
             this.lbl_Formulario.AutoSize = true;
-            this.lbl_Formulario.Font = new System.Drawing.Font("Adobe Heiti Std R", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Formulario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbl_Formulario.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Formulario.Location = new System.Drawing.Point(35, 17);
+            this.lbl_Formulario.Location = new System.Drawing.Point(68, 20);
             this.lbl_Formulario.Name = "lbl_Formulario";
-            this.lbl_Formulario.Size = new System.Drawing.Size(200, 19);
+            this.lbl_Formulario.Size = new System.Drawing.Size(198, 18);
             this.lbl_Formulario.TabIndex = 12;
             this.lbl_Formulario.Text = "Ingresa tus datos personales";
+            // 
+            // txtedad
+            // 
+            this.txtedad.Location = new System.Drawing.Point(120, 335);
+            this.txtedad.Name = "txtedad";
+            this.txtedad.Size = new System.Drawing.Size(100, 20);
+            this.txtedad.TabIndex = 13;
+            // 
+            // lblEdad
+            // 
+            this.lblEdad.AutoSize = true;
+            this.lblEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblEdad.ForeColor = System.Drawing.Color.Black;
+            this.lblEdad.Location = new System.Drawing.Point(143, 314);
+            this.lblEdad.Name = "lblEdad";
+            this.lblEdad.Size = new System.Drawing.Size(42, 18);
+            this.lblEdad.TabIndex = 14;
+            this.lblEdad.Text = "Edad";
             // 
             // Formulario
             // 
@@ -213,7 +235,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(521, 388);
+            this.ClientSize = new System.Drawing.Size(544, 479);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "Formulario";
@@ -229,17 +251,19 @@
 
         private System.Windows.Forms.Label lbl_Usuario;
         private System.Windows.Forms.Label lbl_Contraseña;
-        private System.Windows.Forms.Label lbl_Confi_Con;
+        private System.Windows.Forms.Label lb_Nombre;
         private System.Windows.Forms.Label lbl_email;
-        private System.Windows.Forms.Label lbl_Curp;
+        private System.Windows.Forms.Label lbl_Apellido;
         private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Button btn_Aceptar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtUsario;
+        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.TextBox txtemail;
+        private System.Windows.Forms.TextBox txtapellido;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_Formulario;
+        private System.Windows.Forms.Label lblEdad;
+        private System.Windows.Forms.TextBox txtedad;
     }
 }

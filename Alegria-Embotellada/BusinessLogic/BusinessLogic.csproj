@@ -45,7 +45,6 @@
     <Compile Include="tb_ConsumidoBAL.cs" />
     <Compile Include="tb_LoginBAL.cs" />
     <Compile Include="tb_PromociónBAL.cs" />
-    <Compile Include="tb_ProveedorBAL.cs" />
     <Compile Include="tb_SucursalBAL.cs" />
   </ItemGroup>
   <ItemGroup>
