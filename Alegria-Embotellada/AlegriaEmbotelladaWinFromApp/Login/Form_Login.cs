@@ -18,7 +18,11 @@ namespace AlegriaEmbotelladaWinFromApp.Login
         {
             InitializeComponent();
         }
-
+        public void  clean()
+        {
+            txt_Contraseña.Text="";
+            txt_Usuario.Text = "";
+        }
         private void btn_Acceder_Click(object sender, EventArgs e)
         {
             DataAcces.tb_Login login = new DataAcces.tb_Login();
@@ -39,12 +43,21 @@ namespace AlegriaEmbotelladaWinFromApp.Login
             {
                 Menu_P.Menu menu = new Menu_P.Menu();
                 menu.Show();
+                clean();
             }
             else
             {
                 MessageBox.Show("Favor de De Registrarse");
+                clean();
             }
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Formulario.Formulario from = new Formulario.Formulario();
+            from.Show();
+            
         }
     }
 }

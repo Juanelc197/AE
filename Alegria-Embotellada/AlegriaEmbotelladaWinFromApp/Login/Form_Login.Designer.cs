@@ -125,7 +125,8 @@
             this.linkLabel1.Size = new System.Drawing.Size(55, 13);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Formulario";
+            this.linkLabel1.Text = "Registrate";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // panel1
             // 
@@ -165,6 +166,7 @@
             this.Controls.Add(this.linkLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -42,9 +42,9 @@
             this.txtemail = new System.Windows.Forms.TextBox();
             this.txtapellido = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_Formulario = new System.Windows.Forms.Label();
-            this.txtedad = new System.Windows.Forms.TextBox();
             this.lblEdad = new System.Windows.Forms.Label();
+            this.txtedad = new System.Windows.Forms.TextBox();
+            this.lbl_Formulario = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -200,24 +200,6 @@
             this.panel1.Size = new System.Drawing.Size(334, 455);
             this.panel1.TabIndex = 12;
             // 
-            // lbl_Formulario
-            // 
-            this.lbl_Formulario.AutoSize = true;
-            this.lbl_Formulario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_Formulario.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Formulario.Location = new System.Drawing.Point(68, 20);
-            this.lbl_Formulario.Name = "lbl_Formulario";
-            this.lbl_Formulario.Size = new System.Drawing.Size(198, 18);
-            this.lbl_Formulario.TabIndex = 12;
-            this.lbl_Formulario.Text = "Ingresa tus datos personales";
-            // 
-            // txtedad
-            // 
-            this.txtedad.Location = new System.Drawing.Point(120, 335);
-            this.txtedad.Name = "txtedad";
-            this.txtedad.Size = new System.Drawing.Size(100, 20);
-            this.txtedad.TabIndex = 13;
-            // 
             // lblEdad
             // 
             this.lblEdad.AutoSize = true;
@@ -229,6 +211,24 @@
             this.lblEdad.TabIndex = 14;
             this.lblEdad.Text = "Edad";
             // 
+            // txtedad
+            // 
+            this.txtedad.Location = new System.Drawing.Point(120, 335);
+            this.txtedad.Name = "txtedad";
+            this.txtedad.Size = new System.Drawing.Size(100, 20);
+            this.txtedad.TabIndex = 13;
+            // 
+            // lbl_Formulario
+            // 
+            this.lbl_Formulario.AutoSize = true;
+            this.lbl_Formulario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Formulario.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Formulario.Location = new System.Drawing.Point(68, 20);
+            this.lbl_Formulario.Name = "lbl_Formulario";
+            this.lbl_Formulario.Size = new System.Drawing.Size(198, 18);
+            this.lbl_Formulario.TabIndex = 12;
+            this.lbl_Formulario.Text = "Ingresa tus datos personales";
+            // 
             // Formulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,6 +239,7 @@
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "Formulario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
             this.TopMost = true;
             this.panel1.ResumeLayout(false);
