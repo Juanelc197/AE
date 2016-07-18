@@ -86,10 +86,10 @@
             // 
             // txt_Usuario
             // 
-            this.txt_Usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txt_Usuario.BackColor = System.Drawing.Color.White;
             this.txt_Usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Usuario.ForeColor = System.Drawing.SystemColors.Window;
+            this.txt_Usuario.ForeColor = System.Drawing.Color.White;
             this.txt_Usuario.Location = new System.Drawing.Point(102, 190);
             this.txt_Usuario.Multiline = true;
             this.txt_Usuario.Name = "txt_Usuario";
@@ -145,7 +145,7 @@
             // 
             // txt_Contraseña
             // 
-            this.txt_Contraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txt_Contraseña.BackColor = System.Drawing.Color.White;
             this.txt_Contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Contraseña.ForeColor = System.Drawing.SystemColors.Window;
