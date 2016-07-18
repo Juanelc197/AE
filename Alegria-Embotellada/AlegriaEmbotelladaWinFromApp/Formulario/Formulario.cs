@@ -36,21 +36,21 @@ namespace AlegriaEmbotelladaWinFromApp.Formulario
             bool IsInsert = tb_LoginBAL.IngresarDatos(login);
             if (IsInsert)
             {
-                MessageBox.Show("Sea Registrado Correctamente");
+                MessageBox.Show("Usted ha quedado registrado correctamente.");
             }
             else
             {
-                MessageBox.Show("Favor de ingresar Todos los campos");
+                MessageBox.Show("¡Atención! Compruebe que todos los campos han sido llenados.");
             }
 
             bool IsInsert1 = tb_ConsumidoBAL.IngresarDatosConsumidor(consumidor);
             if (IsInsert1)
             {
-                MessageBox.Show("Sea Registrado Correctamente");
+                MessageBox.Show("Usted ha quedado registrado correctamente.");
             }
             else
             {
-                MessageBox.Show("Favor de ingresar Todos los campos");
+                MessageBox.Show("¡Atención! Compruebe que todos los campos han sido llenados.");
             }
 
         }
