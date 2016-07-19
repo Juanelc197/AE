@@ -38,6 +38,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_Contraseña = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -89,7 +90,7 @@
             this.txt_Usuario.BackColor = System.Drawing.Color.White;
             this.txt_Usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Usuario.ForeColor = System.Drawing.Color.White;
+            this.txt_Usuario.ForeColor = System.Drawing.Color.Black;
             this.txt_Usuario.Location = new System.Drawing.Point(102, 190);
             this.txt_Usuario.Multiline = true;
             this.txt_Usuario.Name = "txt_Usuario";
@@ -120,7 +121,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Location = new System.Drawing.Point(420, 369);
+            this.linkLabel1.Location = new System.Drawing.Point(223, 359);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(57, 13);
             this.linkLabel1.TabIndex = 4;
@@ -148,12 +149,22 @@
             this.txt_Contraseña.BackColor = System.Drawing.Color.White;
             this.txt_Contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Contraseña.ForeColor = System.Drawing.SystemColors.Window;
+            this.txt_Contraseña.ForeColor = System.Drawing.Color.Black;
             this.txt_Contraseña.Location = new System.Drawing.Point(102, 239);
             this.txt_Contraseña.Multiline = true;
             this.txt_Contraseña.Name = "txt_Contraseña";
+            this.txt_Contraseña.PasswordChar = '*';
             this.txt_Contraseña.Size = new System.Drawing.Size(132, 20);
             this.txt_Contraseña.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(161, 334);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(177, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "¿No tienes una cuenta? Regístrate.";
             // 
             // Form_Login
             // 
@@ -162,6 +173,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(486, 391);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.linkLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -187,5 +199,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txt_Contraseña;
+        private System.Windows.Forms.Label label1;
     }
 }
