@@ -109,7 +109,7 @@
             this.btn_Acceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Acceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Acceder.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Acceder.Location = new System.Drawing.Point(130, 265);
+            this.btn_Acceder.Location = new System.Drawing.Point(130, 268);
             this.btn_Acceder.Name = "btn_Acceder";
             this.btn_Acceder.Size = new System.Drawing.Size(77, 33);
             this.btn_Acceder.TabIndex = 3;
@@ -132,6 +132,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lbl_1);
             this.panel1.Controls.Add(this.btn_Acceder);
@@ -141,7 +142,7 @@
             this.panel1.Controls.Add(this.txt_Usuario);
             this.panel1.Location = new System.Drawing.Point(80, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(322, 301);
+            this.panel1.Size = new System.Drawing.Size(322, 344);
             this.panel1.TabIndex = 5;
             // 
             // txt_Contraseña
@@ -160,9 +161,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(161, 334);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(62, 313);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 13);
+            this.label1.Size = new System.Drawing.Size(215, 16);
             this.label1.TabIndex = 6;
             this.label1.Text = "¿No tienes una cuenta? Regístrate.";
             // 
@@ -172,8 +174,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(486, 391);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(488, 394);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.linkLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
