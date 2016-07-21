@@ -32,11 +32,11 @@ namespace AlegriaEmbotelladaWinFromApp.Login
             tb_LoginBAL.validrPassword(passwoord);
             if(txt_Contraseña.Text =="")
             {
-                MessageBox.Show("Falto llenar campo Contraseña");
+                MessageBox.Show("Introduzca una contraseña por favor.");
             }
             if (txt_Usuario.Text == "")
             {
-                MessageBox.Show("Falto llenar campo Usuario");
+                MessageBox.Show("Introduzca un nombre de usuario por favor.");
             }
             bool isExistente = tb_LoginBAL.validarNameNick(username);
             if (isExistente)
@@ -47,7 +47,7 @@ namespace AlegriaEmbotelladaWinFromApp.Login
             }
             else
             {
-                MessageBox.Show("Favor de De Registrarse");
+                MessageBox.Show("Favor de registrarse.");
                 clean();
             }
 
