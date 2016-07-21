@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formulario));
             this.lbl_Usuario = new System.Windows.Forms.Label();
             this.lbl_Contraseña = new System.Windows.Forms.Label();
             this.lb_Nombre = new System.Windows.Forms.Label();
@@ -51,65 +52,70 @@
             // 
             this.lbl_Usuario.AutoSize = true;
             this.lbl_Usuario.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Usuario.ForeColor = System.Drawing.Color.Black;
             this.lbl_Usuario.Location = new System.Drawing.Point(55, 66);
             this.lbl_Usuario.Name = "lbl_Usuario";
-            this.lbl_Usuario.Size = new System.Drawing.Size(60, 18);
+            this.lbl_Usuario.Size = new System.Drawing.Size(62, 16);
             this.lbl_Usuario.TabIndex = 0;
             this.lbl_Usuario.Text = "Usuario";
             // 
             // lbl_Contraseña
             // 
             this.lbl_Contraseña.AutoSize = true;
-            this.lbl_Contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Contraseña.ForeColor = System.Drawing.Color.Black;
             this.lbl_Contraseña.Location = new System.Drawing.Point(55, 118);
             this.lbl_Contraseña.Name = "lbl_Contraseña";
-            this.lbl_Contraseña.Size = new System.Drawing.Size(85, 18);
+            this.lbl_Contraseña.Size = new System.Drawing.Size(87, 16);
             this.lbl_Contraseña.TabIndex = 1;
             this.lbl_Contraseña.Text = "Contraseña";
             // 
             // lb_Nombre
             // 
             this.lb_Nombre.AutoSize = true;
-            this.lb_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lb_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Nombre.ForeColor = System.Drawing.Color.Black;
             this.lb_Nombre.Location = new System.Drawing.Point(55, 169);
             this.lb_Nombre.Name = "lb_Nombre";
-            this.lb_Nombre.Size = new System.Drawing.Size(110, 18);
+            this.lb_Nombre.Size = new System.Drawing.Size(112, 16);
             this.lb_Nombre.TabIndex = 2;
             this.lb_Nombre.Text = "Primer Nombre";
             // 
             // lbl_email
             // 
             this.lbl_email.AutoSize = true;
-            this.lbl_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_email.ForeColor = System.Drawing.Color.Black;
             this.lbl_email.Location = new System.Drawing.Point(56, 324);
             this.lbl_email.Name = "lbl_email";
-            this.lbl_email.Size = new System.Drawing.Size(132, 18);
+            this.lbl_email.Size = new System.Drawing.Size(136, 16);
             this.lbl_email.TabIndex = 3;
             this.lbl_email.Text = "Correo electrónico";
             // 
             // lbl_Apellido
             // 
             this.lbl_Apellido.AutoSize = true;
-            this.lbl_Apellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Apellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Apellido.ForeColor = System.Drawing.Color.Black;
             this.lbl_Apellido.Location = new System.Drawing.Point(55, 224);
             this.lbl_Apellido.Name = "lbl_Apellido";
-            this.lbl_Apellido.Size = new System.Drawing.Size(107, 18);
+            this.lbl_Apellido.Size = new System.Drawing.Size(115, 16);
             this.lbl_Apellido.TabIndex = 4;
             this.lbl_Apellido.Text = "Primer Apellido";
             // 
             // btn_Cancelar
             // 
             this.btn_Cancelar.BackColor = System.Drawing.Color.LightGray;
-            this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancelar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_Cancelar.FlatAppearance.BorderSize = 2;
+            this.btn_Cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btn_Cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancelar.Location = new System.Drawing.Point(183, 425);
             this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(75, 35);
+            this.btn_Cancelar.Size = new System.Drawing.Size(79, 35);
             this.btn_Cancelar.TabIndex = 5;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = false;
@@ -118,7 +124,12 @@
             // btn_Aceptar
             // 
             this.btn_Aceptar.BackColor = System.Drawing.Color.LightGray;
-            this.btn_Aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Aceptar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_Aceptar.FlatAppearance.BorderSize = 2;
+            this.btn_Aceptar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_Aceptar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Aceptar.Location = new System.Drawing.Point(77, 425);
             this.btn_Aceptar.Name = "btn_Aceptar";
             this.btn_Aceptar.Size = new System.Drawing.Size(75, 35);
@@ -193,7 +204,7 @@
             this.panel1.Controls.Add(this.txtContraseña);
             this.panel1.Controls.Add(this.lbl_email);
             this.panel1.Controls.Add(this.lbl_Apellido);
-            this.panel1.Location = new System.Drawing.Point(104, 0);
+            this.panel1.Location = new System.Drawing.Point(103, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(334, 472);
             this.panel1.TabIndex = 12;
@@ -201,11 +212,11 @@
             // lblEdad
             // 
             this.lblEdad.AutoSize = true;
-            this.lblEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEdad.ForeColor = System.Drawing.Color.Black;
             this.lblEdad.Location = new System.Drawing.Point(55, 277);
             this.lblEdad.Name = "lblEdad";
-            this.lblEdad.Size = new System.Drawing.Size(42, 18);
+            this.lblEdad.Size = new System.Drawing.Size(45, 16);
             this.lblEdad.TabIndex = 14;
             this.lblEdad.Text = "Edad";
             // 
@@ -231,10 +242,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(544, 479);
+            this.ClientSize = new System.Drawing.Size(544, 496);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Formulario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
