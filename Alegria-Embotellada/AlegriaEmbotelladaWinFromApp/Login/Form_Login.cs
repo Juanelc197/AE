@@ -55,9 +55,14 @@ namespace AlegriaEmbotelladaWinFromApp.Login
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            
+            
+        }
+
+        private void btn_Registrar_Click(object sender, EventArgs e)
+        {
             Formulario.Formulario from = new Formulario.Formulario();
             from.Show();
-            
         }
     }
 }

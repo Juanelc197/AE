@@ -35,10 +35,10 @@
             this.lbl_3 = new System.Windows.Forms.Label();
             this.txt_Usuario = new System.Windows.Forms.TextBox();
             this.btn_Acceder = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txt_Contraseña = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt_Contraseña = new System.Windows.Forms.TextBox();
+            this.btn_Registrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +57,7 @@
             // 
             this.lbl_1.AutoSize = true;
             this.lbl_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_1.Location = new System.Drawing.Point(103, 141);
+            this.lbl_1.Location = new System.Drawing.Point(94, 141);
             this.lbl_1.Name = "lbl_1";
             this.lbl_1.Size = new System.Drawing.Size(136, 24);
             this.lbl_1.TabIndex = 1;
@@ -68,7 +68,7 @@
             this.lbl_2.AutoSize = true;
             this.lbl_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_2.ForeColor = System.Drawing.Color.Black;
-            this.lbl_2.Location = new System.Drawing.Point(138, 169);
+            this.lbl_2.Location = new System.Drawing.Point(131, 169);
             this.lbl_2.Name = "lbl_2";
             this.lbl_2.Size = new System.Drawing.Size(62, 16);
             this.lbl_2.TabIndex = 1;
@@ -79,7 +79,7 @@
             this.lbl_3.AutoSize = true;
             this.lbl_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_3.ForeColor = System.Drawing.Color.Black;
-            this.lbl_3.Location = new System.Drawing.Point(126, 220);
+            this.lbl_3.Location = new System.Drawing.Point(119, 220);
             this.lbl_3.Name = "lbl_3";
             this.lbl_3.Size = new System.Drawing.Size(87, 16);
             this.lbl_3.TabIndex = 1;
@@ -91,7 +91,7 @@
             this.txt_Usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Usuario.ForeColor = System.Drawing.Color.Black;
-            this.txt_Usuario.Location = new System.Drawing.Point(102, 190);
+            this.txt_Usuario.Location = new System.Drawing.Point(96, 190);
             this.txt_Usuario.Multiline = true;
             this.txt_Usuario.Name = "txt_Usuario";
             this.txt_Usuario.Size = new System.Drawing.Size(132, 20);
@@ -109,25 +109,13 @@
             this.btn_Acceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Acceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Acceder.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Acceder.Location = new System.Drawing.Point(130, 268);
+            this.btn_Acceder.Location = new System.Drawing.Point(124, 268);
             this.btn_Acceder.Name = "btn_Acceder";
             this.btn_Acceder.Size = new System.Drawing.Size(77, 33);
             this.btn_Acceder.TabIndex = 3;
             this.btn_Acceder.Text = "Acceder";
             this.btn_Acceder.UseVisualStyleBackColor = true;
             this.btn_Acceder.Click += new System.EventHandler(this.btn_Acceder_Click);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Location = new System.Drawing.Point(223, 359);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(57, 13);
-            this.linkLabel1.TabIndex = 4;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Regístrate";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // panel1
             // 
@@ -145,28 +133,46 @@
             this.panel1.Size = new System.Drawing.Size(322, 344);
             this.panel1.TabIndex = 5;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(46, 313);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(233, 15);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "¿No tienes una cuenta? Regístrate.";
+            // 
             // txt_Contraseña
             // 
             this.txt_Contraseña.BackColor = System.Drawing.Color.White;
             this.txt_Contraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Contraseña.ForeColor = System.Drawing.Color.Black;
-            this.txt_Contraseña.Location = new System.Drawing.Point(102, 239);
+            this.txt_Contraseña.Location = new System.Drawing.Point(96, 239);
             this.txt_Contraseña.Multiline = true;
             this.txt_Contraseña.Name = "txt_Contraseña";
             this.txt_Contraseña.PasswordChar = '*';
             this.txt_Contraseña.Size = new System.Drawing.Size(132, 20);
             this.txt_Contraseña.TabIndex = 2;
             // 
-            // label1
+            // btn_Registrar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(62, 313);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "¿No tienes una cuenta? Regístrate.";
+            this.btn_Registrar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Registrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Registrar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_Registrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Registrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Registrar.Location = new System.Drawing.Point(205, 362);
+            this.btn_Registrar.Name = "btn_Registrar";
+            this.btn_Registrar.Size = new System.Drawing.Size(81, 30);
+            this.btn_Registrar.TabIndex = 6;
+            this.btn_Registrar.Text = "Regístrate";
+            this.btn_Registrar.UseVisualStyleBackColor = false;
+            this.btn_Registrar.Click += new System.EventHandler(this.btn_Registrar_Click);
             // 
             // Form_Login
             // 
@@ -175,9 +181,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(488, 394);
+            this.Controls.Add(this.btn_Registrar);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.linkLabel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -185,7 +194,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -197,9 +205,9 @@
         private System.Windows.Forms.Label lbl_3;
         private System.Windows.Forms.TextBox txt_Usuario;
         private System.Windows.Forms.Button btn_Acceder;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txt_Contraseña;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_Registrar;
     }
 }
