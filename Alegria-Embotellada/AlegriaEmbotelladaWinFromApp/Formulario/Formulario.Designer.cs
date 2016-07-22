@@ -39,11 +39,11 @@
             this.txtUsario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
-            this.txtemail = new System.Windows.Forms.TextBox();
+            this.txtedad = new System.Windows.Forms.TextBox();
             this.txtapellido = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblEdad = new System.Windows.Forms.Label();
-            this.txtedad = new System.Windows.Forms.TextBox();
+            this.txtemail = new System.Windows.Forms.TextBox();
             this.lbl_Formulario = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -167,14 +167,14 @@
             this.txtnombre.Size = new System.Drawing.Size(216, 20);
             this.txtnombre.TabIndex = 9;
             // 
-            // txtemail
+            // txtedad
             // 
-            this.txtemail.BackColor = System.Drawing.SystemColors.Window;
-            this.txtemail.Location = new System.Drawing.Point(59, 298);
-            this.txtemail.Multiline = true;
-            this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(57, 20);
-            this.txtemail.TabIndex = 10;
+            this.txtedad.BackColor = System.Drawing.SystemColors.Window;
+            this.txtedad.Location = new System.Drawing.Point(59, 298);
+            this.txtedad.Multiline = true;
+            this.txtedad.Name = "txtedad";
+            this.txtedad.Size = new System.Drawing.Size(57, 20);
+            this.txtedad.TabIndex = 10;
             // 
             // txtapellido
             // 
@@ -190,14 +190,14 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lblEdad);
-            this.panel1.Controls.Add(this.txtedad);
+            this.panel1.Controls.Add(this.txtemail);
             this.panel1.Controls.Add(this.lbl_Formulario);
             this.panel1.Controls.Add(this.txtUsario);
             this.panel1.Controls.Add(this.btn_Cancelar);
             this.panel1.Controls.Add(this.txtapellido);
             this.panel1.Controls.Add(this.btn_Aceptar);
             this.panel1.Controls.Add(this.lbl_Usuario);
-            this.panel1.Controls.Add(this.txtemail);
+            this.panel1.Controls.Add(this.txtedad);
             this.panel1.Controls.Add(this.lbl_Contraseña);
             this.panel1.Controls.Add(this.txtnombre);
             this.panel1.Controls.Add(this.lb_Nombre);
@@ -220,12 +220,12 @@
             this.lblEdad.TabIndex = 14;
             this.lblEdad.Text = "Edad";
             // 
-            // txtedad
+            // txtemail
             // 
-            this.txtedad.Location = new System.Drawing.Point(59, 346);
-            this.txtedad.Name = "txtedad";
-            this.txtedad.Size = new System.Drawing.Size(248, 20);
-            this.txtedad.TabIndex = 13;
+            this.txtemail.Location = new System.Drawing.Point(59, 346);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(248, 20);
+            this.txtemail.TabIndex = 13;
             // 
             // lbl_Formulario
             // 
@@ -272,11 +272,11 @@
         private System.Windows.Forms.TextBox txtUsario;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.TextBox txtnombre;
-        private System.Windows.Forms.TextBox txtemail;
+        private System.Windows.Forms.TextBox txtedad;
         private System.Windows.Forms.TextBox txtapellido;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_Formulario;
         private System.Windows.Forms.Label lblEdad;
-        private System.Windows.Forms.TextBox txtedad;
+        private System.Windows.Forms.TextBox txtemail;
     }
 }

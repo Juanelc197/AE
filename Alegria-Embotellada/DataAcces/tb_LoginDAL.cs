@@ -29,6 +29,7 @@ namespace DataAcces
             
         }
         #endregion
+
         #region Validar Password
         public static bool validarPassword(string password)
         {
@@ -46,8 +47,9 @@ namespace DataAcces
                     return false;
                 }
             }
-        }
+        }   
         #endregion
+
         #region Insertar Datos 
         public static bool IngresarDatos (tb_Login login)
         {
@@ -59,6 +61,7 @@ namespace DataAcces
             }
         }
         #endregion
+
         #region Modificar Login
         public static bool ModificarLogin(tb_Login login)
         {

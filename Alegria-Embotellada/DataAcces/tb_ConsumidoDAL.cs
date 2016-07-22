@@ -21,6 +21,7 @@ namespace DataAcces
             }
         }
         #endregion
+
         #region Modificar Consumidor
         public static bool ModificarConsumidor(tb_Consumidor consumido)
         {
@@ -47,6 +48,7 @@ namespace DataAcces
             return false;
         }
         #endregion
+
         #region Visualzar  Consumidor
         public static List<tb_Consumidor> VisualizarConsumidor()
         {
@@ -56,6 +58,28 @@ namespace DataAcces
                              select b).ToList();
                 return query;
             }
+        }
+        #endregion
+
+        #region Validación de email
+        public static bool validaremail(string email)
+        {
+            using (AlegriaEmbotelladaEntities bd = new AlegriaEmbotelladaEntities())
+            {
+                var query = (from b in bd.tb_Consumidor
+                             where b.email== email
+                             select b).Count();
+                if (query > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+
         }
         #endregion
     }
