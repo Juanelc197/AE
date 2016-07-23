@@ -30,25 +30,24 @@ namespace AlegriaEmbotelladaWinFromApp.Login
             string passwoord = txt_Contraseña.Text;
             tb_LoginBAL.validarNameNick(username);
             tb_LoginBAL.validrPassword(passwoord);
-            if(txt_Contraseña.Text =="")
+            if(txt_Usuario.Text == "" || txt_Contraseña.Text =="")
             {
-                MessageBox.Show("Introduzca una contraseña por favor.");
-            }
-            if (txt_Usuario.Text == "")
-            {
-                MessageBox.Show("Introduzca un nombre de usuario por favor.");
-            }
-            bool isExistente = tb_LoginBAL.validarNameNick(username);
-            if (isExistente)
-            {
-                Menu_P.Menu menu = new Menu_P.Menu();
-                menu.Show();
-                clean();
+                MessageBox.Show("Introduzca una contraseña y/o usuario por favor.");
             }
             else
             {
-                MessageBox.Show("Favor de registrarse.");
-                clean();
+                bool isExistente = tb_LoginBAL.validarNameNick(username);
+                if (isExistente)
+                {
+                    Menu_P.Menu menu = new Menu_P.Menu();
+                    menu.Show();
+                    clean();
+                }
+                else
+                {
+                    MessageBox.Show("Favor de registrarse.");
+                    clean();
+                }
             }
 
         }

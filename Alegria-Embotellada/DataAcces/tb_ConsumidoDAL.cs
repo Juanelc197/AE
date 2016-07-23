@@ -13,13 +13,31 @@ namespace DataAcces
         #region Ingresar Datos Consumido
         public static bool IngresarDatosConsumidor(tb_Consumidor consumidor)
         {
-            using (AlegriaEmbotelladaEntities bd = new AlegriaEmbotelladaEntities())
+            try
             {
-                bd.tb_Consumidor.Add(consumidor);
-                bd.SaveChanges();
-                return true;
+                using (AlegriaEmbotelladaEntities bd = new AlegriaEmbotelladaEntities())
+                {
+                    bd.tb_Consumidor.Add(consumidor);
+                    bd.SaveChanges();
+                    return true;
+                }
             }
+            catch (DbEntityValidationException dbEx)
+            {
+                foreach (DbEntityValidationResult entityErr in dbEx.EntityValidationErrors)
+                {
+                    foreach (DbValidationError erorr in entityErr.ValidationErrors)
+                    {
+                        Console.WriteLine("Error Property Name {0} : Error Message: {1}",
+                            erorr.PropertyName, erorr.ErrorMessage);
+                    }
+                }
+
+
+            }
+            return false;
         }
+    
         #endregion
 
         #region Modificar Consumidor
@@ -82,8 +100,53 @@ namespace DataAcces
 
         }
         #endregion
+
+        #region Validación de name
+        public static bool validarNAME(string name)
+        {
+            using (AlegriaEmbotelladaEntities bd = new AlegriaEmbotelladaEntities())
+            {
+                var query = (from b in bd.tb_Consumidor
+                             where b.Primer_Nombre == name
+                             select b).Count();
+                if (query > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+
+        }
+        #endregion
+
+        #region Validación de lastname
+        public static bool validarlastname(string lastname)
+        {
+            using (AlegriaEmbotelladaEntities bd = new AlegriaEmbotelladaEntities())
+            {
+                var query = (from b in bd.tb_Consumidor
+                             where b.Primer_Apellido == lastname
+                             select b).Count();
+                if (query > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+
+        }
+        #endregion
     }
 }
+
 
 
 

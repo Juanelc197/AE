@@ -12,6 +12,7 @@ namespace BusinessLogic
         #region Ingresar Datos Consumidor
         public static bool IngresarDatosConsumidor(tb_Consumidor consumidor)
         {
+            //validar si existe 
             return tb_ConsumidoDAL.IngresarDatosConsumidor(consumidor);
         }
         #endregion
@@ -34,6 +35,20 @@ namespace BusinessLogic
         public static bool validaremail(string email)
         {
             return tb_ConsumidoDAL.validaremail(email);
+        }
+        #endregion
+
+        #region validacacion de name
+        public static bool validarname(string name)
+        {
+            return tb_ConsumidoDAL.validarNAME(name);
+        }
+        #endregion
+
+        #region validacacion de lastname
+        public static bool validarlastname(string lastname)
+        {
+            return tb_ConsumidoDAL.validarlastname(lastname);
         }
         #endregion
     }
