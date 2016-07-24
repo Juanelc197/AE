@@ -26,6 +26,7 @@ namespace DataAcces
         public int Número { get; set; }
         public string Colonia { get; set; }
         public int FK_Promoción { get; set; }
+        public string Municipio_Estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_Promoción> tb_Promoción { get; set; }

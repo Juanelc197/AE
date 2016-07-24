@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="AlegriaEmbotelladaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="AlegriaEmbotelladaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -73,10 +73,11 @@
           </Key>
           <Property Name="PK_Sucursal" Type="int" Nullable="false" />
           <Property Name="Nombre_Sucursal" Type="varchar" MaxLength="15" Nullable="false" />
-          <Property Name="Calle" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Calle" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Número" Type="int" Nullable="false" />
-          <Property Name="Colonia" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Colonia" Type="varchar" MaxLength="40" Nullable="false" />
           <Property Name="FK_Promoción" Type="int" Nullable="false" />
+          <Property Name="Municipio_Estado" Type="varchar" MaxLength="50" />
         </EntityType>
         <Association Name="cod_Articulo">
           <End Role="tb_Artículo" Type="Self.tb_Artículo" Multiplicity="1" />
@@ -151,8 +152,7 @@
             <End Role="tb_Artículo" EntitySet="tb_Artículo" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="AlegriaEmbotelladaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -231,11 +231,12 @@
           </Key>
           <Property Name="PK_Sucursal" Type="Int32" Nullable="false" />
           <Property Name="Nombre_Sucursal" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Calle" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Calle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Número" Type="Int32" Nullable="false" />
-          <Property Name="Colonia" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Colonia" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="FK_Promoción" Type="Int32" Nullable="false" />
           <NavigationProperty Name="tb_Promoción" Relationship="Self.cod_sucursal" FromRole="tb_Sucursal" ToRole="tb_Promoción" />
+          <Property Name="Municipio_Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="cod_Articulo">
           <End Role="tb_Artículo" Type="Self.tb_Artículo" Multiplicity="1" />
@@ -387,6 +388,7 @@
           <EntitySetMapping Name="tb_Sucursal">
             <EntityTypeMapping TypeName="AlegriaEmbotelladaModel.tb_Sucursal">
               <MappingFragment StoreEntitySet="tb_Sucursal">
+                <ScalarProperty Name="Municipio_Estado" ColumnName="Municipio_Estado" />
                 <ScalarProperty Name="PK_Sucursal" ColumnName="PK_Sucursal" />
                 <ScalarProperty Name="Nombre_Sucursal" ColumnName="Nombre_Sucursal" />
                 <ScalarProperty Name="Calle" ColumnName="Calle" />
