@@ -23,7 +23,7 @@ namespace DataAcces
         public int PK_Artículo { get; set; }
         public string Nombre { get; set; }
         public string Marca { get; set; }
-        public int Precio { get; set; }
+        public decimal Precio { get; set; }
         public string Existencia { get; set; }
         public int Presentacion { get; set; }
         public int FK_Proveedor { get; set; }

@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtmenorprecio = new System.Windows.Forms.TextBox();
+            this.lblprecio = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbMarcas = new System.Windows.Forms.ComboBox();
+            this.cmbSucrusal = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblprecio = new System.Windows.Forms.Label();
-            this.txtmenorprecio = new System.Windows.Forms.TextBox();
-            this.txtmayorprecio = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -46,14 +46,13 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtmayorprecio);
+            this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.txtmenorprecio);
             this.groupBox1.Controls.Add(this.lblprecio);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmbMarcas);
+            this.groupBox1.Controls.Add(this.cmbSucrusal);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 517);
@@ -61,6 +60,32 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(12, 216);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtmenorprecio
+            // 
+            this.txtmenorprecio.Location = new System.Drawing.Point(12, 164);
+            this.txtmenorprecio.Name = "txtmenorprecio";
+            this.txtmenorprecio.Size = new System.Drawing.Size(29, 20);
+            this.txtmenorprecio.TabIndex = 5;
+            // 
+            // lblprecio
+            // 
+            this.lblprecio.AutoSize = true;
+            this.lblprecio.Location = new System.Drawing.Point(9, 147);
+            this.lblprecio.Name = "lblprecio";
+            this.lblprecio.Size = new System.Drawing.Size(40, 13);
+            this.lblprecio.TabIndex = 4;
+            this.lblprecio.Text = "Precio ";
             // 
             // label2
             // 
@@ -80,62 +105,42 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Marcas";
             // 
-            // comboBox2
+            // cmbMarcas
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(10, 105);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 1;
+            this.cmbMarcas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMarcas.FormattingEnabled = true;
+            this.cmbMarcas.Location = new System.Drawing.Point(10, 105);
+            this.cmbMarcas.Name = "cmbMarcas";
+            this.cmbMarcas.Size = new System.Drawing.Size(121, 21);
+            this.cmbMarcas.TabIndex = 1;
             // 
-            // comboBox1
+            // cmbSucrusal
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(7, 44);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cmbSucrusal.BackColor = System.Drawing.SystemColors.Window;
+            this.cmbSucrusal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSucrusal.FormattingEnabled = true;
+            this.cmbSucrusal.Location = new System.Drawing.Point(7, 44);
+            this.cmbSucrusal.Name = "cmbSucrusal";
+            this.cmbSucrusal.Size = new System.Drawing.Size(121, 21);
+            this.cmbSucrusal.TabIndex = 0;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(245, 16);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(706, 513);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // lblprecio
-            // 
-            this.lblprecio.AutoSize = true;
-            this.lblprecio.Location = new System.Drawing.Point(9, 147);
-            this.lblprecio.Name = "lblprecio";
-            this.lblprecio.Size = new System.Drawing.Size(40, 13);
-            this.lblprecio.TabIndex = 4;
-            this.lblprecio.Text = "Precio ";
-            // 
-            // txtmenorprecio
-            // 
-            this.txtmenorprecio.Location = new System.Drawing.Point(12, 164);
-            this.txtmenorprecio.Name = "txtmenorprecio";
-            this.txtmenorprecio.Size = new System.Drawing.Size(29, 20);
-            this.txtmenorprecio.TabIndex = 5;
-            // 
-            // txtmayorprecio
-            // 
-            this.txtmayorprecio.Location = new System.Drawing.Point(64, 163);
-            this.txtmayorprecio.Name = "txtmayorprecio";
-            this.txtmayorprecio.Size = new System.Drawing.Size(32, 20);
-            this.txtmayorprecio.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 170);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(10, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "-";
             // 
             // Menu
             // 
@@ -161,14 +166,13 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbSucrusal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbMarcas;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtmayorprecio;
         private System.Windows.Forms.TextBox txtmenorprecio;
         private System.Windows.Forms.Label lblprecio;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

@@ -19,6 +19,7 @@ namespace DataAcces
             }
         }
         #endregion
+
         #region Visualizar Nombre del articulo
         public static tb_Artículo VisualizarNombre(string nombre)
         {
@@ -26,6 +27,19 @@ namespace DataAcces
             {
                 var query = (from b in bd.tb_Artículo
                              where b.Nombre == nombre
+                             select b).Single();
+                return query;
+            }
+        }
+        #endregion
+
+        #region Visualizar Precio
+        public static tb_Artículo VisualizarPrecio(decimal precio)
+        {
+            using (AlegriaEmbotelladaEntities bd = new AlegriaEmbotelladaEntities())
+            {
+                var query = (from b in bd.tb_Artículo
+                             where b.Precio == precio
                              select b).Single();
                 return query;
             }

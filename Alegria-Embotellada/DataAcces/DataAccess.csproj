@@ -103,6 +103,8 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>AlegriaEmbotelladaModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="AlegriaEmbotelladaModel.edmx.diagram">
       <DependentUpon>AlegriaEmbotelladaModel.edmx</DependentUpon>
     </None>
