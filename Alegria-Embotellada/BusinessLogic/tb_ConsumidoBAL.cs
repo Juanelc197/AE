@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BusinessLogic
 {
@@ -58,34 +59,36 @@ namespace BusinessLogic
                 mensaje = "Existen campos vacios, Favor de llenar los campos vacios";
             }
             else
-            {    //Validación de Email
-                if (!IsValidEmail(email))
+            {
+                if (IsLetters(name) || IsLetters(lastname))
                 {
-                    mensaje = "El usuario no contiene el formato deseado,Favor d introducir formato correcto";
+                    mensaje = "Favor de introducir solo Letras en Los campos de Nombre y Apellido";
                 }
                 else
                 {
-                    //Validación para La comporbación si exixte
-                    isExiste = tb_ConsumidoDAL.validarCampos(name, lastname, email);
-
-                    if (isExiste)
+                    //Validación de Email
+                    if (!IsValidEmail(email))
                     {
-                        mensaje = "Ya esta registrado, Favor de volver llenar los campos";
+                        mensaje = "El usuario no contiene el formato deseado,Favor d introducir formato correcto";
                     }
                     else
                     {
-                        mensaje = "";
+                        //Validación para La comporbación si exixte
+                        isExiste = tb_ConsumidoDAL.validarCampos(name, lastname, email);
+
+                        if (isExiste)
+                        {
+                            mensaje = "Ya esta registrado, Favor de volver llenar los campos";
+                        }
+                        else
+                        {
+                            mensaje = "";
+                        }
                     }
-
-
                 }
-
-
 
             }
             return mensaje;
-
-
         }
         //Metodo Para validar Email
         private static bool IsValidEmail(string email)
@@ -100,7 +103,18 @@ namespace BusinessLogic
                 return false;
             }
         }
-
+       public static bool IsLetters(string name)
+        {
+            foreach (char ch in name)
+            {
+                if (!Char.IsLetter(ch) && ch != 32)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+    
 
         #endregion
     }

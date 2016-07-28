@@ -15,12 +15,14 @@ namespace BusinessLogic
             return tb_SucursalDAL.VisualizarSucrusal();
         }
         #endregion
+
         #region Visualizar Colonia
         public static tb_Sucursal VisualizarColonia(string colonia)
         {
             return tb_SucursalDAL.VisualizarColonia(colonia);
         }
         #endregion
+
         #region Visualizar Marca
         public static List<tb_Sucursal> vizualisarsLugar(int sucursal)
         {
