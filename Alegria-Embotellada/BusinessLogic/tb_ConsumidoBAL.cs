@@ -26,7 +26,7 @@ namespace BusinessLogic
             }
             else
             {
-                mensaje = "Atención no se a registrado correctamente";
+                mensaje = "¡ATENCIÓN! No se ha podido registrar correctamente.";
             }
             return mensaje;
         }
@@ -55,13 +55,13 @@ namespace BusinessLogic
             //Validación si los Campos están Vaciós
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(lastname) || string.IsNullOrEmpty(email))
             {
-                mensaje = "Existen campos vacios, Favor de llenar los campos vacios";
+                mensaje = "ERROR. Existen campos vacíos. Favor de llenar llenarlos.";
             }
             else
             {    //Validación de Email
                 if (!IsValidEmail(email))
                 {
-                    mensaje = "El usuario no contiene el formato deseado,Favor d introducir formato correcto";
+                    mensaje = "ERROR. El nombre de usuario no contiene el formato indicado. Favor de corregirlo.";
                 }
                 else
                 {
@@ -70,7 +70,7 @@ namespace BusinessLogic
 
                     if (isExiste)
                     {
-                        mensaje = "Ya esta registrado, Favor de volver llenar los campos";
+                        mensaje = "¡ATENCIÓN! El nombre de usuario ya existe. Favor de introducir uno distinto.";
                     }
                     else
                     {

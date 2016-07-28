@@ -22,7 +22,7 @@ namespace BusinessLogic
             }
             else
             {
-                mensaje = "Atención no se a registrado correctamente";
+                mensaje = "¡ATENCIÓN! No se ha podido registrar correctamente.";
             }
             return mensaje;
         }
@@ -48,7 +48,7 @@ namespace BusinessLogic
                 }
                 else
                 {
-                    mensaje = "no se registrado";
+                    mensaje = "No ha podido registrarse. Por favor, llene los campos solicitados.";
                 }
             }
             return mensaje;
@@ -71,11 +71,11 @@ namespace BusinessLogic
 
                 if (isExiste)
                 {
-                    mensaje = "Ya esta registrado, Favor de volver llenar los campos";
+                    mensaje = "¡ATENCIÓN! El nombre de usuario ya existe. Favor de introducir uno distinto.";
                 }
                 else
                 {
-                    mensaje = "";
+                    mensaje = "Usted ha quedado correctamente.";
                 }
             }
             return mensaje;
