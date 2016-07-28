@@ -35,21 +35,22 @@ namespace AlegriaEmbotelladaWinFromApp.Menu_P
         private void btnBuscar_Click(object sender, EventArgs e)
         {  
 
-            //int marca = Convert.ToInt32(cmbMarcas.SelectedValue.ToString());
-            //int sucur = Convert.ToInt32(cmbSucrusal.SelectedValue.ToString());
-            //dataGridView1.DataSource = tb_SucursalBAL.vizualisarsLugar(sucur);
-            //dataGridView1.DataSource = tb_ArtículoBAL.vizualisarMarca(marca);
-
-
-            //decimal Preciomenor = Convert.ToDecimal(txtprecio1.Text);
-            //decimal Preciomayor = Convert.ToDecimal(txtprecio2.Text);
-            //dataGridView1.DataSource = tb_ArtículoBAL.VisualizarPrecio(Preciomayor, Preciomenor);
+            
          
 
 
 
         }
 
+        private void cmbSucrusal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //    int marca = Convert.ToInt32(cmbMarcas.SelectedValue.ToString());
+            //    dataGridView1.DataSource = tb_PromociónBAL.Vizualisarfiltro(marca);
+        }
 
+        private void cmbMarcas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -133,6 +133,7 @@
             this.cmbMarcas.Name = "cmbMarcas";
             this.cmbMarcas.Size = new System.Drawing.Size(121, 21);
             this.cmbMarcas.TabIndex = 1;
+            this.cmbMarcas.SelectedIndexChanged += new System.EventHandler(this.cmbMarcas_SelectedIndexChanged);
             // 
             // cmbSucrusal
             // 
@@ -143,6 +144,7 @@
             this.cmbSucrusal.Name = "cmbSucrusal";
             this.cmbSucrusal.Size = new System.Drawing.Size(121, 21);
             this.cmbSucrusal.TabIndex = 0;
+            this.cmbSucrusal.SelectedIndexChanged += new System.EventHandler(this.cmbSucrusal_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
