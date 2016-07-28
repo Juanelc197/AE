@@ -22,11 +22,10 @@ namespace AlegriaEmbotelladaWinFromApp.Menu_P
             cmbMarcas.DataSource = tb_ArtículoBAL.vizualisarArtículo();
             cmbMarcas.ValueMember = "PK_Artículo";
             cmbMarcas.DisplayMember = "Marca";
-           
-        
+            dataGridView1.DataSource = tb_ArtículoBAL.vizualisarArtículo();
 
         }
-       
+
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -34,11 +33,23 @@ namespace AlegriaEmbotelladaWinFromApp.Menu_P
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
-        {
+        {  
 
-            decimal id = Convert.ToInt32(cmbMarcas.SelectedValue.ToString());
-            DataAcces.tb_Artículo articulo = tb_ArtículoBAL.VisualizarPrecio(id);
-            //DataAcces.tb_Artículo pre = tb_ArtículoBAL.VisualizarPrecio(precio);
+            int marca = Convert.ToInt32(cmbMarcas.SelectedValue.ToString());
+            int sucur = Convert.ToInt32(cmbSucrusal.SelectedValue.ToString());
+            dataGridView1.DataSource = tb_SucursalBAL.vizualisarsLugar(sucur);
+            dataGridView1.DataSource = tb_ArtículoBAL.vizualisarMarca(marca);
+
+
+            decimal Preciomenor = Convert.ToDecimal(txtprecio1.Text);
+            decimal Preciomayor = Convert.ToDecimal(txtprecio2.Text);
+            dataGridView1.DataSource = tb_ArtículoBAL.VisualizarPrecio(Preciomayor, Preciomenor);
+         
+
+
+
         }
+
+
     }
 }

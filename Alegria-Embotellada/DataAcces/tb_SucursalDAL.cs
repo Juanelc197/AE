@@ -19,6 +19,7 @@ namespace DataAcces
             }
         }
         #endregion
+
         #region Visualizar Colonia
         public static tb_Sucursal VisualizarColonia(string colonia)
         {
@@ -31,5 +32,19 @@ namespace DataAcces
             }
         }
         #endregion
+
+        #region vizualizar Lugar
+        public static List<tb_Sucursal> vizualisarLugar(int sucrusal)
+        {
+            using (AlegriaEmbotelladaEntities bd = new AlegriaEmbotelladaEntities())
+            {
+                var query = (from d in bd.tb_Sucursal
+                             where d.PK_Sucursal == sucrusal
+                             select d).ToList();
+                return query;
+            }
+        }
+        #endregion
+
     }
 }

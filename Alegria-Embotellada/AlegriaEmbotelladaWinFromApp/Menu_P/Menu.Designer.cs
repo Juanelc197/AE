@@ -31,8 +31,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblsingo = new System.Windows.Forms.Label();
+            this.txtprecio2 = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtmenorprecio = new System.Windows.Forms.TextBox();
+            this.txtprecio1 = new System.Windows.Forms.TextBox();
             this.lblprecio = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,8 +48,10 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.lblsingo);
+            this.groupBox1.Controls.Add(this.txtprecio2);
             this.groupBox1.Controls.Add(this.btnBuscar);
-            this.groupBox1.Controls.Add(this.txtmenorprecio);
+            this.groupBox1.Controls.Add(this.txtprecio1);
             this.groupBox1.Controls.Add(this.lblprecio);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -61,6 +65,22 @@
             this.groupBox1.Text = "Busqueda";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // lblsingo
+            // 
+            this.lblsingo.AutoSize = true;
+            this.lblsingo.Location = new System.Drawing.Point(48, 171);
+            this.lblsingo.Name = "lblsingo";
+            this.lblsingo.Size = new System.Drawing.Size(10, 13);
+            this.lblsingo.TabIndex = 10;
+            this.lblsingo.Text = "-";
+            // 
+            // txtprecio2
+            // 
+            this.txtprecio2.Location = new System.Drawing.Point(64, 164);
+            this.txtprecio2.Name = "txtprecio2";
+            this.txtprecio2.Size = new System.Drawing.Size(32, 20);
+            this.txtprecio2.TabIndex = 9;
+            // 
             // btnBuscar
             // 
             this.btnBuscar.Location = new System.Drawing.Point(12, 216);
@@ -71,12 +91,12 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // txtmenorprecio
+            // txtprecio1
             // 
-            this.txtmenorprecio.Location = new System.Drawing.Point(12, 164);
-            this.txtmenorprecio.Name = "txtmenorprecio";
-            this.txtmenorprecio.Size = new System.Drawing.Size(29, 20);
-            this.txtmenorprecio.TabIndex = 5;
+            this.txtprecio1.Location = new System.Drawing.Point(12, 164);
+            this.txtprecio1.Name = "txtprecio1";
+            this.txtprecio1.Size = new System.Drawing.Size(29, 20);
+            this.txtprecio1.TabIndex = 5;
             // 
             // lblprecio
             // 
@@ -171,8 +191,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbMarcas;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtmenorprecio;
+        private System.Windows.Forms.TextBox txtprecio1;
         private System.Windows.Forms.Label lblprecio;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Label lblsingo;
+        private System.Windows.Forms.TextBox txtprecio2;
     }
 }

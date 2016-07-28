@@ -18,50 +18,44 @@ namespace AlegriaEmbotelladaWinFromApp.Login
         {
             InitializeComponent();
         }
-        public void  clean()
+
+        #region Metodo para limpiar campos
+        public void clean()
         {
-            txt_Contraseña.Text="";
+            txt_Contraseña.Text = "";
             txt_Usuario.Text = "";
         }
+        #endregion
+
+        #region Boton Aceptar
         private void btn_Acceder_Click(object sender, EventArgs e)
         {
-            DataAcces.tb_Login login = new DataAcces.tb_Login();
             string username = txt_Usuario.Text;
             string passwoord = txt_Contraseña.Text;
-            tb_LoginBAL.validarNameNick(username);
-            tb_LoginBAL.validrPassword(passwoord);
-            if(txt_Usuario.Text == "" || txt_Contraseña.Text =="")
+
+            string mensaje = tb_LoginBAL.usauarioExiste(passwoord, username);
+
+            if(string.IsNullOrEmpty(mensaje))
             {
-                MessageBox.Show("Introduzca una contraseña y/o usuario por favor.");
+                Menu_P.Menu menu = new Menu_P.Menu();
+                menu.Show();
+                clean();
             }
             else
             {
-                bool isExistente = tb_LoginBAL.validarNameNick(username);
-                if (isExistente)
-                {
-                    Menu_P.Menu menu = new Menu_P.Menu();
-                    menu.Show();
-                    clean();
-                }
-                else
-                {
-                    MessageBox.Show("Favor de registrarse.");
-                    clean();
-                }
+                MessageBox.Show(mensaje);
+                clean();
             }
-
         }
+        #endregion
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            
-            
-        }
-
+        #region Boton Para Registrar
         private void btn_Registrar_Click(object sender, EventArgs e)
         {
             Formulario.Formulario from = new Formulario.Formulario();
             from.Show();
         }
+
     }
+    #endregion
 }

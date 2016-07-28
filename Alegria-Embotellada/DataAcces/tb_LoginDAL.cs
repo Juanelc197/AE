@@ -9,34 +9,14 @@ namespace DataAcces
 {
    public class tb_LoginDAL
     {
-        #region Validar NameNick
-        public static bool validarNameNick(string username)
-        { using(AlegriaEmbotelladaEntities bd = new AlegriaEmbotelladaEntities())
-            {
-                var query = (from b in bd.tb_Login
-                             where b.UserName == username
-                             select b).Count();
-                if (query > 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-                
-            }
-            
-        }
-        #endregion
 
-        #region Validar Password
-        public static bool validarPassword(string password)
+        #region Validar Password y NameNick
+        public static bool validarPasswordyNameNick(string password , string user)
         {
             using(AlegriaEmbotelladaEntities bd = new AlegriaEmbotelladaEntities())
             {
                 var query = (from b in bd.tb_Login
-                             where b.PASSWORD == password
+                             where b.PASSWORD == password && b.UserName== user
                              select b).Count();
                 if(query > 0)
                 {

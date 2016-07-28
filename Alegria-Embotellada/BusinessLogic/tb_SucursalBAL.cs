@@ -21,5 +21,12 @@ namespace BusinessLogic
             return tb_SucursalDAL.VisualizarColonia(colonia);
         }
         #endregion
+        #region Visualizar Marca
+        public static List<tb_Sucursal> vizualisarsLugar(int sucursal)
+        {
+            return tb_SucursalDAL.vizualisarLugar(sucursal);
+        }
+        #endregion
+
     }
 }

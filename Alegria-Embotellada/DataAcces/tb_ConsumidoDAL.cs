@@ -37,7 +37,7 @@ namespace DataAcces
             }
             return false;
         }
-    
+
         #endregion
 
         #region Modificar Consumidor
@@ -79,13 +79,13 @@ namespace DataAcces
         }
         #endregion
 
-        #region Validación de email
-        public static bool validaremail(string email)
+        #region Validación De Campos Name, Last Name, Email
+        public static bool validarCampos(string name, string lastname, string email)
         {
             using (AlegriaEmbotelladaEntities bd = new AlegriaEmbotelladaEntities())
             {
                 var query = (from b in bd.tb_Consumidor
-                             where b.email== email
+                             where b.Primer_Nombre == name && b.Primer_Apellido == lastname && b.email == email
                              select b).Count();
                 if (query > 0)
                 {
@@ -101,49 +101,6 @@ namespace DataAcces
         }
         #endregion
 
-        #region Validación de name
-        public static bool validarNAME(string name)
-        {
-            using (AlegriaEmbotelladaEntities bd = new AlegriaEmbotelladaEntities())
-            {
-                var query = (from b in bd.tb_Consumidor
-                             where b.Primer_Nombre == name
-                             select b).Count();
-                if (query > 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-
-            }
-
-        }
-        #endregion
-
-        #region Validación de lastname
-        public static bool validarlastname(string lastname)
-        {
-            using (AlegriaEmbotelladaEntities bd = new AlegriaEmbotelladaEntities())
-            {
-                var query = (from b in bd.tb_Consumidor
-                             where b.Primer_Apellido == lastname
-                             select b).Count();
-                if (query > 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-
-            }
-
-        }
-        #endregion
     }
 }
 

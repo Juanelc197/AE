@@ -12,7 +12,7 @@ namespace BusinessLogic
         #region Visualizar Articulo
         public static List<tb_Artículo> vizualisarArtículo()
         {
-            return tb_ArtículoDAL.vizualisarArtículo();
+            return tb_ArtículoDAL.vizualisarArticulo();
         }
         #endregion
 
@@ -24,10 +24,21 @@ namespace BusinessLogic
         #endregion
 
         #region Vizualizar precio
-        public static tb_Artículo VisualizarPrecio(decimal precio)
+        public static List<tb_Artículo> VisualizarPrecio(decimal precio1,decimal precio2)
         {
-            return tb_ArtículoDAL.VisualizarPrecio(precio);
+            return tb_ArtículoDAL.VisualizarPrecio(precio1,precio2);
         }
         #endregion
+
+        #region Visualizar Marca
+        public static List<tb_Artículo> vizualisarMarca(int marca)
+        {
+            return tb_ArtículoDAL.vizualisarMarca(marca);
+        }
+        #endregion
+
+
+
+
     }
 }

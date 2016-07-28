@@ -42,73 +42,61 @@ namespace AlegriaEmbotelladaWinFromApp.Formulario
         private void btn_Aceptar_Click(object sender, EventArgs e)
         {
             try
-            {
-                int edad = Convert.ToInt32(txtedad.Text);
-                if (edad >= 18)
-                {
-                    string username = txtUsario.Text;
-                    string password = txtContraseña.Text;
-                    tb_LoginBAL.validarNameNick(username);
-                    tb_LoginBAL.validrPassword(password);
-                    string email = txtemail.Text;
-                    string name = txtnombre.Text;
-
-                    string lastname = txtapellido.Text;
-                    tb_ConsumidoBAL.validaremail(email);
-                    tb_ConsumidoBAL.validarname(name);
-                    tb_ConsumidoBAL.validarlastname(lastname);
-                    bool IsExistusername = tb_LoginBAL.validarNameNick(username);
-                    bool IsExistpassword = tb_LoginBAL.validrPassword(password);
-                    bool IsExistemil = tb_ConsumidoBAL.validaremail(email);
-                    bool IsExistName = tb_ConsumidoBAL.validarname(name);
-                    bool IsExistlastname = tb_ConsumidoBAL.validarlastname(lastname);
-
-
-                    if (txtapellido.Text == "" || txtContraseña.Text == "" || txtedad.Text == "" || txtemail.Text == "" || txtnombre.Text == "" || txtUsario.Text == "")
+            {   //Se insertan los Campos para Hacer la validación
+                string username = txtUsario.Text;
+                string password = txtContraseña.Text;
+                string email = txtemail.Text;
+                string name = txtnombre.Text;
+                string lastname = txtapellido.Text;
+                string mensajeDato = tb_ConsumidoBAL.DatosExiste(name, lastname, email);
+                string mensajeUsuario = tb_LoginBAL.usauarioExisteformu(password, username);
+                //Validación para los campos a Sql si estan vaciós y Existen
+                if (string.IsNullOrEmpty(mensajeDato) && string.IsNullOrEmpty(mensajeUsuario))
+                {   //Validación para la edad
+                    int edad = Convert.ToInt32(txtedad.Text);
+                    if (edad <= 18)
                     {
-                        MessageBox.Show("Favor de llenar  los campos restantes");
+                        MessageBox.Show("No puedes registrare eres menor de edad");
+                        clean();
                     }
+
                     else
-                    {
-                        if (IsExistusername || IsExistpassword || IsExistName || IsExistName || IsExistlastname || IsExistemil)
+                    {   //Se insertan los Datos a Sql
+                        DataAcces.tb_Login logiear = new DataAcces.tb_Login();
+                        logiear.UserName = txtUsario.Text;
+                        logiear.PASSWORD = txtContraseña.Text;
+                        string Logininsertar = tb_LoginBAL.MensajesIngresarDatos(logiear);
+                        DataAcces.tb_Consumidor consumidor = new DataAcces.tb_Consumidor();
+                        consumidor.email = txtemail.Text;
+                        consumidor.Primer_Nombre = txtnombre.Text;
+                        consumidor.Primer_Apellido = txtapellido.Text;
+                        consumidor.edad = Convert.ToInt32(txtedad.Text);
+                        consumidor.FK_Usuario = logiear.PK_Usuario;
+                        string consumidorinsertar = tb_ConsumidoBAL.MensajeConsumidor(consumidor);
+                        // Validación para insertar los datos en Sql
+                        if (string.IsNullOrEmpty(Logininsertar) && string.IsNullOrEmpty(consumidorinsertar))
                         {
-                            MessageBox.Show("Alguno de los campos ya existse");
+                            MessageBox.Show("Usted ha quedado registrado correctamente.");
                             clean();
                         }
                         else
                         {
-                            DataAcces.tb_Login login = new DataAcces.tb_Login();
-                            login.UserName = txtUsario.Text;
-                            login.PASSWORD = txtContraseña.Text;
-                            bool IsInsertlogin = tb_LoginBAL.IngresarDatos(login);
-                            DataAcces.tb_Consumidor consumidor = new DataAcces.tb_Consumidor();
-                            consumidor.email = txtemail.Text;
-                            consumidor.Primer_Nombre = txtnombre.Text;
-                            consumidor.Primer_Apellido = txtapellido.Text;
-                            consumidor.edad = Convert.ToInt32(txtedad.Text);
-                            consumidor.FK_Usuario = login.PK_Usuario;
-                            bool IsInsertconsumidor = tb_ConsumidoBAL.IngresarDatosConsumidor(consumidor);
-                            if (IsInsertconsumidor && IsInsertlogin)
-                            {
-                                MessageBox.Show("Usted ha quedado registrado correctamente.");
-                                clean();
-                            }
-                            else
-                            {
-                                MessageBox.Show("¡Atención! Compruebe que todos los campos han sido llenados.");
-                            }
+                            MessageBox.Show("¡Atención! Compruebe que todos los campos han sido llenados.");
                         }
                     }
                 }
+
                 else
                 {
-                    MessageBox.Show("No puedes registrare eres menor de edad");
+                    MessageBox.Show(mensajeDato);
                     clean();
                 }
             }
+            //Excepción para el campos de la Edad
             catch (FormatException)
             {
                 MessageBox.Show("El campo Edad no admite letras");
+                clean();
             }
         }
         #endregion

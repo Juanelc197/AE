@@ -7,26 +7,81 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic
 {
-  public  class tb_LoginBAL
+    public class tb_LoginBAL
     {
         #region ingresar datos
-        public static bool IngresarDatos(tb_Login login)
+        public static string MensajesIngresarDatos(tb_Login login)
         {
-            return tb_LoginDAL.IngresarDatos(login);
+            string mensaje = "";
+            bool isInsert = false;
+            isInsert = tb_LoginDAL.IngresarDatos(login);
+            //Validación para insertar Datos de Login
+            if (isInsert)
+            {
+                mensaje = "";
+            }
+            else
+            {
+                mensaje = "Atención no se a registrado correctamente";
+            }
+            return mensaje;
         }
         #endregion
-        #region Validar NameNick
-        public static bool validarNameNick(string username)
+
+        #region Validar PasswordyUser del Login
+        public static string usauarioExiste(string pass, string user)
         {
-            return tb_LoginDAL.validarNameNick(username);
+            string mensaje = "";
+            bool isExiste = false;
+            //Validación si los campos viene vaciós
+            if (string.IsNullOrEmpty(user) || string.IsNullOrEmpty(pass))
+            {
+                mensaje = "Existen campos vacios, Favor de introducir usuarito y/o constraña";
+            }
+            else
+            {
+                isExiste = tb_LoginDAL.validarPasswordyNameNick(pass, user);
+                //Validación si exixten los campos en el Login
+                if (isExiste)
+                {
+                    mensaje = "";
+                }
+                else
+                {
+                    mensaje = "no se registrado";
+                }
+            }
+            return mensaje;
         }
         #endregion
-        #region Validar Password
-        public static bool validrPassword(string password)
+
+        #region Validar PasswordyUser del Fromulario
+        public static string usauarioExisteformu(string pass, string user)
         {
-            return tb_LoginDAL.validarPassword(password);
+            string mensaje = "";
+            bool isExiste = false;
+            //Validación para si Los campos no estan vaciós
+            if (string.IsNullOrEmpty(user) || string.IsNullOrEmpty(pass))
+            {
+                mensaje = "Existen campos vacios, Favor de introducir usuarito y/o constraña";
+            }
+            else
+            {    //Validación si  Existen los campos en el Formulario
+                isExiste = tb_LoginDAL.validarPasswordyNameNick(pass, user);
+
+                if (isExiste)
+                {
+                    mensaje = "Ya esta registrado, Favor de volver llenar los campos";
+                }
+                else
+                {
+                    mensaje = "";
+                }
+            }
+            return mensaje;
         }
         #endregion
+
         #region Modificar Login
         public static bool ModificarLogin(tb_Login login)
         {

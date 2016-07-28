@@ -3,17 +3,32 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace BusinessLogic
 {
     public class tb_ConsumidoBAL
     {
+        
+
         #region Ingresar Datos Consumidor
-        public static bool IngresarDatosConsumidor(tb_Consumidor consumidor)
+        public static string MensajeConsumidor(tb_Consumidor consumido)
         {
-            //validar si existe 
-            return tb_ConsumidoDAL.IngresarDatosConsumidor(consumidor);
+            string mensaje = "";
+            bool inIsert = false;
+            //Validación para insertar consumidor
+            inIsert = tb_ConsumidoDAL.IngresarDatosConsumidor(consumido);
+            if (inIsert)
+            {
+                mensaje = "";
+
+            }
+            else
+            {
+                mensaje = "Atención no se a registrado correctamente";
+            }
+            return mensaje;
         }
         #endregion
 
@@ -31,25 +46,65 @@ namespace BusinessLogic
         }
         #endregion
 
-        #region validacacion de e-mail
-        public static bool validaremail(string email)
-        {
-            return tb_ConsumidoDAL.validaremail(email);
-        }
-        #endregion
+        #region Validar Name , Last Name , Email
 
-        #region validacacion de name
-        public static bool validarname(string name)
+        public static string DatosExiste(string name, string lastname, string email)
         {
-            return tb_ConsumidoDAL.validarNAME(name);
-        }
-        #endregion
+            string mensaje = "";
+            bool isExiste = false;
+            //Validación si los Campos están Vaciós
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(lastname) || string.IsNullOrEmpty(email))
+            {
+                mensaje = "Existen campos vacios, Favor de llenar los campos vacios";
+            }
+            else
+            {    //Validación de Email
+                if (!IsValidEmail(email))
+                {
+                    mensaje = "El usuario no contiene el formato deseado,Favor d introducir formato correcto";
+                }
+                else
+                {
+                    //Validación para La comporbación si exixte
+                    isExiste = tb_ConsumidoDAL.validarCampos(name, lastname, email);
 
-        #region validacacion de lastname
-        public static bool validarlastname(string lastname)
-        {
-            return tb_ConsumidoDAL.validarlastname(lastname);
+                    if (isExiste)
+                    {
+                        mensaje = "Ya esta registrado, Favor de volver llenar los campos";
+                    }
+                    else
+                    {
+                        mensaje = "";
+                    }
+
+
+                }
+
+
+
+            }
+            return mensaje;
+
+
         }
+        //Metodo Para validar Email
+        private static bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
         #endregion
     }
 }
+
+
+
