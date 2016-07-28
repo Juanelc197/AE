@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic
 {
-   public class tb_PromociónBAL
+    public class tb_PromociónBAL
     {
         #region Visualizar Promoción
         public static DataTable VizualisarPromocion()
@@ -17,12 +17,26 @@ namespace BusinessLogic
         }
         #endregion
 
-        #region Visualizar Promoción
-        public static DataTable Vizualisarfiltro(string marca,decimal precio1, decimal precio2, string sucursal)
+        #region Buscar Marca
+        public static DataTable buscarmarca(int marca)
         {
-            return tb_PromociónDAL.Vizualisarfiltor(marca, precio1, precio2, sucursal);
+            return tb_PromociónDAL.buscarmarca(marca);
         }
         #endregion
 
+        #region Buscar Sucursal
+        public static DataTable buscarsucrusal( string sucursal)
+        {
+            return tb_PromociónDAL.buscarsucrusal(sucursal);
+        }
+        #endregion
+
+        #region Buscar Precio
+        public static DataTable buscarprecio(decimal precio1, decimal precio2)
+        {
+            return tb_PromociónDAL.buscarprecio(precio1, precio2);
+        }
+        #endregion
+
+        }
     }
-}

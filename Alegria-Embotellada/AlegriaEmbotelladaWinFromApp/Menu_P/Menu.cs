@@ -38,19 +38,20 @@ namespace AlegriaEmbotelladaWinFromApp.Menu_P
             
          
 
-
+           string sucursal = Convert.ToString(cmbMarcas.SelectedValue.ToString());    
+            dataGridView1.DataSource = tb_PromociónBAL.buscarsucrusal(sucursal);
 
         }
 
         private void cmbSucrusal_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //    int marca = Convert.ToInt32(cmbMarcas.SelectedValue.ToString());
-            //    dataGridView1.DataSource = tb_PromociónBAL.Vizualisarfiltro(marca);
+            
         }
 
         private void cmbMarcas_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //int marca = Convert.ToInt32(cmbMarcas.SelectedValue.ToString());
+            //dataGridView1.DataSource = tb_PromociónBAL.buscarmarca(marca);
         }
     }
 }

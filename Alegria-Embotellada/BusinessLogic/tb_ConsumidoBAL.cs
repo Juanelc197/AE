@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BusinessLogic
 {
@@ -67,6 +68,22 @@ namespace BusinessLogic
                 {
                     //Validación para La comporbación si exixte
                     isExiste = tb_ConsumidoDAL.validarCampos(name, lastname, email);
+            {
+                if (IsLetters(name) || IsLetters(lastname))
+                {
+                    mensaje = "Favor de introducir solo Letras en Los campos de Nombre y Apellido";
+                }
+                else
+                {
+                    //Validación de Email
+                    if (!IsValidEmail(email))
+                    {
+                        mensaje = "El usuario no contiene el formato deseado,Favor d introducir formato correcto";
+                    }
+                    else
+                    {
+                        //Validación para La comporbación si exixte
+                        isExiste = tb_ConsumidoDAL.validarCampos(name, lastname, email);
 
                     if (isExiste)
                     {
@@ -80,12 +97,8 @@ namespace BusinessLogic
 
                 }
 
-
-
             }
             return mensaje;
-
-
         }
         //Metodo Para validar Email
         private static bool IsValidEmail(string email)
@@ -100,7 +113,18 @@ namespace BusinessLogic
                 return false;
             }
         }
-
+       public static bool IsLetters(string name)
+        {
+            foreach (char ch in name)
+            {
+                if (!Char.IsLetter(ch) && ch != 32)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+    
 
         #endregion
     }
