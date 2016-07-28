@@ -22,7 +22,7 @@ namespace AlegriaEmbotelladaWinFromApp.Menu_P
             cmbMarcas.DataSource = tb_ArtículoBAL.vizualisarArtículo();
             cmbMarcas.ValueMember = "PK_Artículo";
             cmbMarcas.DisplayMember = "Marca";
-            dataGridView1.DataSource = tb_ArtículoBAL.vizualisarArtículo();
+            dataGridView1.DataSource = tb_PromociónBAL.VizualisarPromocion();
 
         }
 
@@ -35,15 +35,15 @@ namespace AlegriaEmbotelladaWinFromApp.Menu_P
         private void btnBuscar_Click(object sender, EventArgs e)
         {  
 
-            int marca = Convert.ToInt32(cmbMarcas.SelectedValue.ToString());
-            int sucur = Convert.ToInt32(cmbSucrusal.SelectedValue.ToString());
-            dataGridView1.DataSource = tb_SucursalBAL.vizualisarsLugar(sucur);
-            dataGridView1.DataSource = tb_ArtículoBAL.vizualisarMarca(marca);
+            //int marca = Convert.ToInt32(cmbMarcas.SelectedValue.ToString());
+            //int sucur = Convert.ToInt32(cmbSucrusal.SelectedValue.ToString());
+            //dataGridView1.DataSource = tb_SucursalBAL.vizualisarsLugar(sucur);
+            //dataGridView1.DataSource = tb_ArtículoBAL.vizualisarMarca(marca);
 
 
-            decimal Preciomenor = Convert.ToDecimal(txtprecio1.Text);
-            decimal Preciomayor = Convert.ToDecimal(txtprecio2.Text);
-            dataGridView1.DataSource = tb_ArtículoBAL.VisualizarPrecio(Preciomayor, Preciomenor);
+            //decimal Preciomenor = Convert.ToDecimal(txtprecio1.Text);
+            //decimal Preciomayor = Convert.ToDecimal(txtprecio2.Text);
+            //dataGridView1.DataSource = tb_ArtículoBAL.VisualizarPrecio(Preciomayor, Preciomenor);
          
 
 

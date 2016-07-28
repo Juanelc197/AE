@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,18 +15,27 @@ namespace DataAcces
         #region Conexión a Sql
         public static bool ConnectToSql()
         {
-            System.Data.SqlClient.SqlConnection conn = new System.Data.SqlClient.SqlConnection();
-            conn.ConnectionString = ConfigurationManager.ConnectionStrings["AlegriaEmbotelladaConnectionString"].ToString();
+            string conexion = "";
+            string connectionstring = ConfigurationManager.ConnectionStrings["AlegriaEmbotelladaConnectionString"].ToString();
+            SqlConnection sqlcon = new SqlConnection();
             try
             {
-                conn.Open();
+                sqlcon.ConnectionString = connectionstring;
+                sqlcon.Open();
+            }
+            catch (Exception exepcion)
+            {
+                conexion = exepcion.Message;
+            }
+            if (sqlcon.State == ConnectionState.Open)
+            {
                 return true;
             }
-            catch (Exception)
+            else
             {
                 return false;
             }
-
+            
         }
         #endregion
     }
