@@ -29,11 +29,11 @@ namespace DataAcces
             }
             if (sqlcon.State == ConnectionState.Open)
             {
-                return true;
+                return false;
             }
             else
             {
-                return false;
+                return true;
             }
             
         }

@@ -14,18 +14,30 @@ namespace BusinessLogic
         {
             string mensaje = "";
             bool isInsert = false;
-            isInsert = tb_LoginDAL.IngresarDatos(login);
-            //Validación para insertar Datos de Login
-            if (isInsert)
+
+            if (!ConnecionDAL.ConnectToSql())
             {
-                mensaje = "";
+                mensaje = "No hay Conexión ";
             }
             else
             {
-                mensaje = "¡ATENCIÓN! No se ha podido registrar correctamente.";
+                isInsert = tb_LoginDAL.IngresarDatos(login);
+                //Validación para insertar Datos de Login
+
+                if (isInsert)
+                {
+                    mensaje = "";
+                }
+                else
+                {
+                    mensaje = "¡ATENCIÓN! No se ha podido registrar correctamente.";
+                }
             }
+
             return mensaje;
+
         }
+
         #endregion
 
         #region Validar PasswordyUser del Login
@@ -33,24 +45,32 @@ namespace BusinessLogic
         {
             string mensaje = "";
             bool isExiste = false;
-            //Validación si los campos viene vaciós
-            if (string.IsNullOrEmpty(user) || string.IsNullOrEmpty(pass))
+            if (ConnecionDAL.ConnectToSql())
             {
-                mensaje = "Existen campos vacios, Favor de introducir usuarito y/o constraña";
+                mensaje = "No hay Conexión";
             }
             else
             {
-                isExiste = tb_LoginDAL.validarPasswordyNameNick(pass, user);
-                //Validación si exixten los campos en el Login
-                if (isExiste)
+                //Validación si los campos viene vaciós
+                if (string.IsNullOrEmpty(user) || string.IsNullOrEmpty(pass))
                 {
-                    mensaje = "";
+                    mensaje = "Existen campos vacios, Favor de introducir usuarito y/o constraña";
                 }
                 else
                 {
-                    mensaje = "No ha podido registrarse. Por favor, llene los campos solicitados.";
+                    isExiste = tb_LoginDAL.validarPasswordyNameNick(pass, user);
+                    //Validación si exixten los campos en el Login
+                    if (isExiste)
+                    {
+                        mensaje = "";
+                    }
+                    else
+                    {
+                        mensaje = "No ha podido registrarse. Por favor, llene los campos solicitados.";
+                    }
                 }
             }
+
             return mensaje;
         }
         #endregion
@@ -60,22 +80,29 @@ namespace BusinessLogic
         {
             string mensaje = "";
             bool isExiste = false;
-            //Validación para si Los campos no estan vaciós
-            if (string.IsNullOrEmpty(user) || string.IsNullOrEmpty(pass))
+            if (ConnecionDAL.ConnectToSql())
             {
-                mensaje = "Existen campos vacios, Favor de introducir usuarito y/o constraña";
+                mensaje = "No hay Conexión";
             }
             else
-            {    //Validación si  Existen los campos en el Formulario
-                isExiste = tb_LoginDAL.validarPasswordyNameNick(pass, user);
-
-                if (isExiste)
+            {
+                //Validación para si Los campos no estan vaciós
+                if (string.IsNullOrEmpty(user) || string.IsNullOrEmpty(pass))
                 {
-                    mensaje = "¡ATENCIÓN! El nombre de usuario ya existe. Favor de introducir uno distinto.";
+                    mensaje = "Existen campos vacios, Favor de introducir usuarito y/o constraña";
                 }
                 else
-                {
-                    mensaje = "Usted ha quedado correctamente.";
+                {    //Validación si  Existen los campos en el Formulario
+                    isExiste = tb_LoginDAL.validarPasswordyNameNick(pass, user);
+
+                    if (isExiste)
+                    {
+                        mensaje = "¡ATENCIÓN! El nombre de usuario ya existe. Favor de introducir uno distinto.";
+                    }
+                    else
+                    {
+                        mensaje = "Usted ha quedado correctamente.";
+                    }
                 }
             }
             return mensaje;
