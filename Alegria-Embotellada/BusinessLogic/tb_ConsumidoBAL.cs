@@ -31,9 +31,9 @@ namespace BusinessLogic
                 }
                 else
                 {
-
+                    mensaje = "¡ATENCIÓN! No se ha podido registrar correctamente.";
                 }
-                mensaje = "¡ATENCIÓN! No se ha podido registrar correctamente.";
+
             }
             return mensaje;
         }
@@ -71,52 +71,45 @@ namespace BusinessLogic
                     mensaje = "ERROR. Existen campos vacíos. Favor de llenar llenarlos.";
                 }
                 else
-                {    //Validación de Email
-                    if (!IsValidEmail(email))
+                {
+                    //Validación para La comporbación si exixte
+                    isExiste = tb_ConsumidoDAL.validarCampos(name, lastname, email);
                     {
-                        mensaje = "ERROR. El nombre de usuario no contiene el formato indicado. Favor de corregirlo.";
-                    }
-                    else
-                    {
-                        //Validación para La comporbación si exixte
-                        isExiste = tb_ConsumidoDAL.validarCampos(name, lastname, email);
+                        if (IsLetters(name) || IsLetters(lastname))
                         {
-                            if (IsLetters(name) || IsLetters(lastname))
+                            mensaje = "Favor de introducir solo Letras en Los campos de Nombre y Apellido";
+                        }
+                        else
+                        {
+                            //Validación de Email
+                            if (!IsValidEmail(email))
                             {
-                                mensaje = "Favor de introducir solo Letras en Los campos de Nombre y Apellido";
+                                mensaje = "El usuario no contiene el formato deseado,Favor d introducir formato correcto";
                             }
                             else
                             {
-                                //Validación de Email
-                                if (!IsValidEmail(email))
+                                //Validación para La comporbación si exixte
+                                isExiste = tb_ConsumidoDAL.validarCampos(name, lastname, email);
+
+                                if (isExiste)
                                 {
-                                    mensaje = "El usuario no contiene el formato deseado,Favor d introducir formato correcto";
+                                    mensaje = "¡ATENCIÓN! El nombre de usuario ya existe. Favor de introducir uno distinto.";
                                 }
                                 else
                                 {
-                                    //Validación para La comporbación si exixte
-                                    isExiste = tb_ConsumidoDAL.validarCampos(name, lastname, email);
-
-                                    if (isExiste)
-                                    {
-                                        mensaje = "¡ATENCIÓN! El nombre de usuario ya existe. Favor de introducir uno distinto.";
-                                    }
-                                    else
-                                    {
-                                        mensaje = "";
-                                    }
-
-
+                                    mensaje = "";
                                 }
 
+
                             }
+
                         }
                     }
                 }
             }
 
             return mensaje;
-
+            
         }
         //Metodo Para validar Email
         private static bool IsValidEmail(string email)
@@ -128,7 +121,7 @@ namespace BusinessLogic
             }
             catch
             {
-                return false;
+                return true;
             }
         }
         public static bool IsLetters(string name)

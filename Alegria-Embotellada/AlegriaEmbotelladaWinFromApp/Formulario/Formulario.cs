@@ -54,7 +54,7 @@ namespace AlegriaEmbotelladaWinFromApp.Formulario
                 if (string.IsNullOrEmpty(mensajeDato) && string.IsNullOrEmpty(mensajeUsuario))
                 {   //Validación para la edad
                     int edad = Convert.ToInt32(txtedad.Text);
-                    if (edad <= 18)
+                    if (edad < 18)
                     {
                         MessageBox.Show("No puedes registrare eres menor de edad");
                         clean();
@@ -89,6 +89,8 @@ namespace AlegriaEmbotelladaWinFromApp.Formulario
                 else
                 {
                     MessageBox.Show(mensajeDato);
+                    
+                    
                     clean();
                 }
             }

@@ -15,7 +15,7 @@ namespace BusinessLogic
             string mensaje = "";
             bool isInsert = false;
 
-            if (!ConnecionDAL.ConnectToSql())
+            if (ConnecionDAL.ConnectToSql())
             {
                 mensaje = "No hay Conexión ";
             }
@@ -38,6 +38,7 @@ namespace BusinessLogic
 
         }
 
+       
         #endregion
 
         #region Validar PasswordyUser del Login
@@ -66,7 +67,7 @@ namespace BusinessLogic
                     }
                     else
                     {
-                        mensaje = "No ha podido registrarse. Por favor, llene los campos solicitados.";
+                        mensaje = "Este usuario no existe o es incorrecto. Favor de verificarlo. ";
                     }
                 }
             }
@@ -75,7 +76,7 @@ namespace BusinessLogic
         }
         #endregion
 
-        #region Validar PasswordyUser del Fromulario
+        #region Validar PasswordyUser del Formulario
         public static string usauarioExisteformu(string pass, string user)
         {
             string mensaje = "";
@@ -86,27 +87,29 @@ namespace BusinessLogic
             }
             else
             {
-                //Validación para si Los campos no estan vaciós
-                if (string.IsNullOrEmpty(user) || string.IsNullOrEmpty(pass))
-                {
-                    mensaje = "Existen campos vacios, Favor de introducir usuarito y/o constraña";
-                }
-                else
-                {    //Validación si  Existen los campos en el Formulario
-                    isExiste = tb_LoginDAL.validarPasswordyNameNick(pass, user);
-
-                    if (isExiste)
+                    //Validación para si Los campos no estan vaciós
+                    if (string.IsNullOrEmpty(user) || string.IsNullOrEmpty(pass))
                     {
-                        mensaje = "¡ATENCIÓN! El nombre de usuario ya existe. Favor de introducir uno distinto.";
+                        mensaje = "Existen campos vacios, Favor de introducir usuarito y/o constraña";
                     }
                     else
-                    {
-                        mensaje = "Usted ha quedado correctamente.";
+                    {    //Validación si  Existen los campos en el Formulario
+                        isExiste = tb_LoginDAL.validarPasswordyNameNick(pass, user);
+
+                        if (isExiste)
+                        {
+                            mensaje = "¡ATENCIÓN! El nombre de usuario ya existe. Favor de introducir uno distinto.";
+                        }
+                        else
+                        {
+                            mensaje = "";
+                        }
                     }
                 }
-            }
+            
             return mensaje;
         }
+      
         #endregion
 
         #region Modificar Login
