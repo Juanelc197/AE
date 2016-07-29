@@ -14,10 +14,12 @@ namespace AlegriaEmbotelladaWinFromApp.Login
 {
     public partial class Form_Login : Form
     {
+        #region Constructor
         public Form_Login()
         {
             InitializeComponent();
         }
+        #endregion
 
         #region Metodo para limpiar campos
         public void clean()
@@ -37,9 +39,11 @@ namespace AlegriaEmbotelladaWinFromApp.Login
 
             if(string.IsNullOrEmpty(mensaje))
             {
+                
                 Menu_P.Menu menu = new Menu_P.Menu();
                 menu.Show();
                 clean();
+                
             }
             else
             {

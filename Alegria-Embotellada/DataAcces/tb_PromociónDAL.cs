@@ -38,39 +38,38 @@ namespace DataAcces
                              select new
                              {
                                  Descripcion = p.Descripción,
+                                 Precio = art.Precio,
+                                 Marca = art.Marca,
                                  Dia_Inicial = p.Dia_Inicio,
                                  Dia_FInal = p.Dia_Finalización,
                                  Nombre_Sucrusal = s.Nombre_Sucursal,
                                  Colonia = s.Colonia,
                                  Calle = s.Calle,
                                  Numero = s.Número,
-                                 Muicipio = s.Municipio_Estado,
-                                 Precio = art.Precio,
-                                 Marca = art.Marca
+                                 Muicipio = s.Municipio_Estado
+                                 
                              }).ToList();
 
-                query.ToList().ForEach((p) =>
-                query.ToList().ForEach((s) =>
-                query.ToList().ForEach((art) =>
+                query.ToList().ForEach((p) =>               
                 {
                     //Creando una fila en el DataTable
                     DataRow fila = dtPromociones.NewRow();
 
                     //Columnas que llevara la fila
                     fila.SetField<string>("Descripcion", p.Descripcion);
-                    fila.SetField<decimal>("Precio", art.Precio);
-                    fila.SetField<string>("Marca", art.Marca);
+                    fila.SetField<decimal>("Precio", p.Precio);
+                    fila.SetField<string>("Marca", p.Marca);
                     fila.SetField<string>("Dia inicial", p.Dia_Inicial);
                     fila.SetField<string>("Dia final", p.Dia_FInal);
-                    fila.SetField<string>("Sucrusal", s.Nombre_Sucrusal);
-                    fila.SetField<string>("Colonia", s.Colonia);
-                    fila.SetField<string>("Calle", s.Calle);
-                    fila.SetField<int>("Numero", s.Numero);
-                    fila.SetField<string>("Municipio", s.Muicipio);
+                    fila.SetField<string>("Sucrusal", p.Nombre_Sucrusal);
+                    fila.SetField<string>("Colonia", p.Colonia);
+                    fila.SetField<string>("Calle", p.Calle);
+                    fila.SetField<int>("Numero", p.Numero);
+                    fila.SetField<string>("Municipio", p.Muicipio);
 
                     //Añadir la fila creada al DataTable
                     dtPromociones.Rows.Add(fila);
-                })));
+                });
             }
 
             //Regresar el DataTable con la informacion
@@ -83,7 +82,7 @@ namespace DataAcces
         #endregion
 
         #region Buscar marca
-        public static DataTable buscarmarca(int marca)
+        public static DataTable buscarmarca(string marca)
         {
 
             //Creando el DataTable
@@ -108,43 +107,43 @@ namespace DataAcces
                              on p.PK_Promoción equals s.FK_Promoción
                              join art in bd.tb_Artículo
                              on p.FK_Artículo equals art.PK_Artículo
-                             where art.PK_Artículo == marca
+                             where art.Marca == marca
                              select new
                              {
                                  Descripcion = p.Descripción,
+                                 Precio = art.Precio,
+                                 Marca = art.Marca,
                                  Dia_Inicial = p.Dia_Inicio,
                                  Dia_FInal = p.Dia_Finalización,
                                  Nombre_Sucrusal = s.Nombre_Sucursal,
                                  Colonia = s.Colonia,
                                  Calle = s.Calle,
                                  Numero = s.Número,
-                                 Muicipio = s.Municipio_Estado,
-                                 Precio = art.Precio,
-                                 Marca = art.Marca
+                                 Muicipio = s.Municipio_Estado
+                                 
                              }).ToList();
 
                 query.ToList().ForEach((p)=>
-                query.ToList().ForEach((s)=>
-                query.ToList().ForEach((art)=>
+                
                 {
                     //Creando una fila en el DataTable
                     DataRow fila = dtPromociones.NewRow();
 
                     //Columnas que llevara la fila
                     fila.SetField<string>("Descripcion", p.Descripcion);
-                    fila.SetField<decimal>("Precio", art.Precio);
-                    fila.SetField<string>("Marca", art.Marca);
+                    fila.SetField<decimal>("Precio", p.Precio);
+                    fila.SetField<string>("Marca", p.Marca);
                     fila.SetField<string>("Dia inicial", p.Dia_Inicial);
                     fila.SetField<string>("Dia final", p.Dia_FInal);
-                    fila.SetField<string>("Sucrusal", s.Nombre_Sucrusal);
-                    fila.SetField<string>("Colonia", s.Colonia);
-                    fila.SetField<string>("Calle", s.Calle);
-                    fila.SetField<int>("Numero", s.Numero);
-                    fila.SetField<string>("Municipio", s.Muicipio);
+                    fila.SetField<string>("Sucrusal", p.Nombre_Sucrusal);
+                    fila.SetField<string>("Colonia", p.Colonia);
+                    fila.SetField<string>("Calle", p.Calle);
+                    fila.SetField<int>("Numero", p.Numero);
+                    fila.SetField<string>("Municipio", p.Muicipio);
 
                     //Añadir la fila creada al DataTable
                     dtPromociones.Rows.Add(fila);
-                })));
+                });
             }
 
             //Regresar el DataTable con la informacion
@@ -176,9 +175,9 @@ namespace DataAcces
             {
                 var query = (from p in bd.tb_Promoción
                              join s in bd.tb_Sucursal
-                             on p.PK_Promoción equals s.FK_Promoción
+                             on p.PK_Promoción equals s.FK_Promoción  
                              join art in bd.tb_Artículo
-                             on p.FK_Artículo equals art.PK_Artículo                         
+                             on p.FK_Artículo equals art.PK_Artículo
                              where s.Nombre_Sucursal == sucursal
                              select new
                              {
@@ -195,27 +194,26 @@ namespace DataAcces
                              }).ToList();
 
                 query.ToList().ForEach((p) =>
-                query.ToList().ForEach((s) =>
-                query.ToList().ForEach((art) =>
+                
                 {
                     //Creando una fila en el DataTable
                     DataRow fila = dtPromociones.NewRow();
 
                     //Columnas que llevara la fila
                     fila.SetField<string>("Descripcion", p.Descripcion);
-                    fila.SetField<decimal>("Precio", art.Precio);
-                    fila.SetField<string>("Marca", art.Marca);
+                    fila.SetField<decimal>("Precio", p.Precio);
+                    fila.SetField<string>("Marca", p.Marca);
                     fila.SetField<string>("Dia inicial", p.Dia_Inicial);
                     fila.SetField<string>("Dia final", p.Dia_FInal);
-                    fila.SetField<string>("Sucrusal", s.Nombre_Sucrusal);
-                    fila.SetField<string>("Colonia", s.Colonia);
-                    fila.SetField<string>("Calle", s.Calle);
-                    fila.SetField<int>("Numero", s.Numero);
-                    fila.SetField<string>("Municipio", s.Muicipio);
+                    fila.SetField<string>("Sucrusal", p.Nombre_Sucrusal);
+                    fila.SetField<string>("Colonia", p.Colonia);
+                    fila.SetField<string>("Calle", p.Calle);
+                    fila.SetField<int>("Numero", p.Numero);
+                    fila.SetField<string>("Municipio", p.Muicipio);
 
                     //Añadir la fila creada al DataTable
                     dtPromociones.Rows.Add(fila);
-                })));
+                });
             }
 
             //Regresar el DataTable con la informacion
@@ -264,25 +262,24 @@ namespace DataAcces
                              }).ToList();
 
                 query.ToList().ForEach((p) =>
-                query.ToList().ForEach((s) =>
-                query.ToList().ForEach((art) =>
+                
                 {
                     //Creando una fila en el DataTable
                     DataRow fila = dtPromociones.NewRow();
                     //Columnas que llevara la fila
                     fila.SetField<string>("Descripcion", p.Descripcion);
-                    fila.SetField<decimal>("Precio", art.Precio);
-                    fila.SetField<string>("Marca", art.Marca);
+                    fila.SetField<decimal>("Precio", p.Precio);
+                    fila.SetField<string>("Marca", p.Marca);
                     fila.SetField<string>("Dia inicial", p.Dia_Inicial);
                     fila.SetField<string>("Dia final", p.Dia_FInal);
-                    fila.SetField<string>("Sucrusal", s.Nombre_Sucrusal);
-                    fila.SetField<string>("Colonia", s.Colonia);
-                    fila.SetField<string>("Calle", s.Calle);
-                    fila.SetField<int>("Numero", s.Numero);
-                    fila.SetField<string>("Municipio", s.Muicipio);
+                    fila.SetField<string>("Sucrusal", p.Nombre_Sucrusal);
+                    fila.SetField<string>("Colonia", p.Colonia);
+                    fila.SetField<string>("Calle", p.Calle);
+                    fila.SetField<int>("Numero", p.Numero);
+                    fila.SetField<string>("Municipio", p.Muicipio);
                     //Añadir la fila creada al DataTable
                     dtPromociones.Rows.Add(fila);
-                })));
+                });
             }
             //Regresar el DataTable con la informacion
             return dtPromociones;

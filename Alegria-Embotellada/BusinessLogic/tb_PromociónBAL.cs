@@ -18,14 +18,14 @@ namespace BusinessLogic
         #endregion
 
         #region Buscar Marca
-        public static DataTable buscarmarca(int marca)
+        public static DataTable buscarmarca(string marca)
         {
             return tb_PromociónDAL.buscarmarca(marca);
         }
         #endregion
 
         #region Buscar Sucursal
-        public static DataTable buscarsucrusal( string sucursal)
+        public static DataTable buscarsucrusal(string sucursal)
         {
             return tb_PromociónDAL.buscarsucrusal(sucursal);
         }
