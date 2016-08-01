@@ -88,7 +88,14 @@ namespace AlegriaEmbotelladaWinFromApp.Formulario
 
                 else
                 {
-                    MessageBox.Show(mensajeDato);
+                    if (string.IsNullOrEmpty(mensajeDato))
+                    {
+                        MessageBox.Show(mensajeUsuario);
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensajeDato);
+                    }
                     
                     
                     clean();

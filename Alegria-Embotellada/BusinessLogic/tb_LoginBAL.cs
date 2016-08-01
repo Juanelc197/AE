@@ -30,7 +30,7 @@ namespace BusinessLogic
                 }
                 else
                 {
-                    mensaje = "¡ATENCIÓN! No se ha podido registrar correctamente.";
+                    mensaje = "¡ATENCIÓN! algunos de los campos ya existe. Favor de introducir uno distinto.";
                 }
             }
 
@@ -86,14 +86,9 @@ namespace BusinessLogic
                 mensaje = "No hay Conexión";
             }
             else
-            {
+            {      
                     //Validación para si Los campos no estan vaciós
-                    if (string.IsNullOrEmpty(user) || string.IsNullOrEmpty(pass))
-                    {
-                        mensaje = "Existen campos vacios, Favor de introducir usuarito y/o constraña";
-                    }
-                    else
-                    {    //Validación si  Existen los campos en el Formulario
+                     //Validación si  Existen los campos en el Formulario
                         isExiste = tb_LoginDAL.validarPasswordyNameNick(pass, user);
 
                         if (isExiste)
@@ -103,13 +98,11 @@ namespace BusinessLogic
                         else
                         {
                             mensaje = "";
-                        }
-                    }
-                }
-            
+                        }  
+            }
             return mensaje;
         }
-      
+       
         #endregion
 
         #region Modificar Login

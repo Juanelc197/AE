@@ -5,6 +5,7 @@ using System.Data.Entity.Validation;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace DataAcces
 {
@@ -13,57 +14,64 @@ namespace DataAcces
         #region Ingresar Datos Consumido
         public static bool IngresarDatosConsumidor(tb_Consumidor consumidor)
         {
-            try
+            using (TransactionScope tran = new TransactionScope())
             {
-                using (AlegriaEmbotelladaEntities bd = new AlegriaEmbotelladaEntities())
+                try
                 {
-                    bd.tb_Consumidor.Add(consumidor);
-                    bd.SaveChanges();
-                    return true;
-                }
-            }
-            catch (DbEntityValidationException dbEx)
-            {
-                foreach (DbEntityValidationResult entityErr in dbEx.EntityValidationErrors)
-                {
-                    foreach (DbValidationError erorr in entityErr.ValidationErrors)
+                    using (AlegriaEmbotelladaEntities bd = new AlegriaEmbotelladaEntities())
                     {
-                        Console.WriteLine("Error Property Name {0} : Error Message: {1}",
-                            erorr.PropertyName, erorr.ErrorMessage);
+                        bd.tb_Consumidor.Add(consumidor);
+                        bd.SaveChanges();
+                        tran.Complete();
+                        return true;
                     }
                 }
+                catch (DbEntityValidationException dbEx)
+                {
+                    foreach (DbEntityValidationResult entityErr in dbEx.EntityValidationErrors)
+                    {
+                        foreach (DbValidationError erorr in entityErr.ValidationErrors)
+                        {
+                            Console.WriteLine("Error Property Name {0} : Error Message: {1}",
+                                erorr.PropertyName, erorr.ErrorMessage);
+                        }
+                    }
 
 
+                }
+                return false;
             }
-            return false;
         }
-
         #endregion
 
         #region Modificar Consumidor
         public static bool ModificarConsumidor(tb_Consumidor consumido)
         {
-            try
+            using (TransactionScope tran = new TransactionScope())
             {
-                using (AlegriaEmbotelladaEntities bd = new AlegriaEmbotelladaEntities())
+                try
                 {
-                    bd.Entry(consumido).State = System.Data.Entity.EntityState.Modified;
-                    bd.SaveChanges();
-                    return true;
-                }
-            }
-            catch (DbEntityValidationException dbEx)
-            {
-                foreach (DbEntityValidationResult entityErr in dbEx.EntityValidationErrors)
-                {
-                    foreach (DbValidationError erorr in entityErr.ValidationErrors)
+                    using (AlegriaEmbotelladaEntities bd = new AlegriaEmbotelladaEntities())
                     {
-                        Console.WriteLine("Error Property Name {0} : Error Message: {1}",
-                            erorr.PropertyName, erorr.ErrorMessage);
+                        bd.Entry(consumido).State = System.Data.Entity.EntityState.Modified;
+                        bd.SaveChanges();
+                        tran.Complete();
+                        return true;
                     }
                 }
+                catch (DbEntityValidationException dbEx)
+                {
+                    foreach (DbEntityValidationResult entityErr in dbEx.EntityValidationErrors)
+                    {
+                        foreach (DbValidationError erorr in entityErr.ValidationErrors)
+                        {
+                            Console.WriteLine("Error Property Name {0} : Error Message: {1}",
+                                erorr.PropertyName, erorr.ErrorMessage);
+                        }
+                    }
+                }
+                return false;
             }
-            return false;
         }
         #endregion
 

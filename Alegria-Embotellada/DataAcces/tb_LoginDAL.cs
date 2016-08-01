@@ -4,6 +4,7 @@ using System.Data.Entity.Validation;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace DataAcces
 {
@@ -32,13 +33,18 @@ namespace DataAcces
 
         #region Insertar Datos 
         public static bool IngresarDatos (tb_Login login)
-        {
-            using(AlegriaEmbotelladaEntities bd  = new AlegriaEmbotelladaEntities())
+        {   using (TransactionScope tran = new TransactionScope())
             {
-                bd.tb_Login.Add(login);
-                bd.SaveChanges();
-                return true;
+                using (AlegriaEmbotelladaEntities bd = new AlegriaEmbotelladaEntities())
+                {
+                    bd.tb_Login.Add(login);
+                    bd.SaveChanges();
+                    tran.Complete();
+                    return true;              
+                }
+                
             }
+           
         }
         #endregion
 

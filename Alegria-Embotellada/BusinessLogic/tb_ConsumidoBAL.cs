@@ -121,7 +121,7 @@ namespace BusinessLogic
             }
             catch
             {
-                return false;
+                return true;
             }
         }
         public static bool IsLetters(string name)
