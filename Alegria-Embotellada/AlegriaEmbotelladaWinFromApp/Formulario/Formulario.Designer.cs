@@ -106,7 +106,7 @@
             // 
             // btn_Cancelar
             // 
-            this.btn_Cancelar.BackColor = System.Drawing.Color.LightGray;
+            this.btn_Cancelar.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Cancelar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_Cancelar.FlatAppearance.BorderSize = 2;
             this.btn_Cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
@@ -123,7 +123,7 @@
             // 
             // btn_Aceptar
             // 
-            this.btn_Aceptar.BackColor = System.Drawing.Color.LightGray;
+            this.btn_Aceptar.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Aceptar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_Aceptar.FlatAppearance.BorderSize = 2;
             this.btn_Aceptar.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
@@ -188,7 +188,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.BackgroundImage = global::AlegriaEmbotelladaWinFromApp.Properties.Resources.fondo_madera21_;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.lblEdad);
             this.panel1.Controls.Add(this.txtemail);
             this.panel1.Controls.Add(this.lbl_Formulario);

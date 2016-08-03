@@ -127,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\AlegriaEmbotelladaWinFromApp.vshost.exe" />
+    <None Include="Resources\fondo%28madera21%29.jpg" />
     <None Include="Resources\Logo-AlegriaE%28proceso%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

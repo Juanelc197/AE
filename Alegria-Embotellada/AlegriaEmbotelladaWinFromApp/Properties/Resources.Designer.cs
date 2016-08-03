@@ -63,6 +63,16 @@ namespace AlegriaEmbotelladaWinFromApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondo_madera21_ {
+            get {
+                object obj = ResourceManager.GetObject("fondo(madera21)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_AlegriaE_proceso_ {
             get {
                 object obj = ResourceManager.GetObject("Logo-AlegriaE(proceso)", resourceCulture);
