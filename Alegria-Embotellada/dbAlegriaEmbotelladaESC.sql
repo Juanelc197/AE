@@ -113,10 +113,10 @@ BEGIN TRY
 						BEGIN
 			   CREATE TABLE tb_Sucursal
               (PK_Sucursal INT  not null,
-               Nombre_Sucursal VARCHAR(15) not null,
-               Calle VARCHAR(15) not null,
+               Nombre_Sucursal VARCHAR(50) not null,
+               Calle VARCHAR(50) not null,
                Número int not null,
-               Colonia VARCHAR(15) not null,
+               Colonia VARCHAR(50) not null,
                FK_Promoción int not null,
                 primary key (PK_Sucursal))
 				END
@@ -148,9 +148,9 @@ BEGIN TRY
 						BEGIN
 				CREATE TABLE tb_Artículo
                (PK_Artículo INT  not null,
-                Nombre VARCHAR (15) not null,
-                Marca VARCHAR (10) not null,
-                Precio INT not null,
+                Nombre VARCHAR (50) not null,
+                Marca VARCHAR (40) not null,
+                Precio MONEY not null,
                 Existencia VARCHAR (2) not null,
                 Presentacion INT not null,
                 FK_Proveedor INT not null
