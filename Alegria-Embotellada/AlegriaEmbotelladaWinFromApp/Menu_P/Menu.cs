@@ -1,4 +1,5 @@
-﻿using BusinessLogic;
+﻿using AlegriaEmbotelladaWinFromApp.Login;
+using BusinessLogic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -76,5 +77,14 @@ namespace AlegriaEmbotelladaWinFromApp.Menu_P
             dataGridView1.DataSource = tb_PromociónBAL.buscarmarca(marca);
         }
         #endregion
+
+        private void lkl_CerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form_Login from = new Form_Login();
+            from.Show();
+
+            this.Close();
+
+        }
     }
 }

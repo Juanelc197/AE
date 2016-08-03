@@ -43,7 +43,7 @@
             this.cmbMarcas = new System.Windows.Forms.ComboBox();
             this.cmbSucrusal = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lkl_CerrarSesion = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -193,16 +193,17 @@
             this.dataGridView1.Size = new System.Drawing.Size(706, 513);
             this.dataGridView1.TabIndex = 3;
             // 
-            // linkLabel1
+            // lkl_CerrarSesion
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Location = new System.Drawing.Point(877, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(73, 13);
-            this.linkLabel1.TabIndex = 4;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Cerrar Sesion ";
+            this.lkl_CerrarSesion.AutoSize = true;
+            this.lkl_CerrarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.lkl_CerrarSesion.Location = new System.Drawing.Point(877, 0);
+            this.lkl_CerrarSesion.Name = "lkl_CerrarSesion";
+            this.lkl_CerrarSesion.Size = new System.Drawing.Size(73, 13);
+            this.lkl_CerrarSesion.TabIndex = 4;
+            this.lkl_CerrarSesion.TabStop = true;
+            this.lkl_CerrarSesion.Text = "Cerrar Sesion ";
+            this.lkl_CerrarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkl_CerrarSesion_LinkClicked);
             // 
             // Menu
             // 
@@ -211,7 +212,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(963, 541);
-            this.Controls.Add(this.linkLabel1);
+            this.ControlBox = false;
+            this.Controls.Add(this.lkl_CerrarSesion);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -242,6 +244,6 @@
         private System.Windows.Forms.TextBox txtprecio2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lkl_CerrarSesion;
     }
 }
