@@ -42,8 +42,8 @@ namespace AlegriaEmbotelladaWinFromApp.Login
                 
                 Menu_P.Menu menu = new Menu_P.Menu();
                 menu.Show();
-                clean();
-                
+                this.Close();
+
             }
             else
             {
