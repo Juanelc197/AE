@@ -40,8 +40,9 @@ namespace AlegriaEmbotelladaWinFromApp.Login
             if(string.IsNullOrEmpty(mensaje))
             {
                 
-                Menu_P.Menu menu = new Menu_P.Menu();
-                menu.Show();
+                Menu_P.Menu from = new Menu_P.Menu();
+                from.Show();
+
                 this.Close();
 
             }
