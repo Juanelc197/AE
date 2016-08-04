@@ -56,6 +56,9 @@ namespace AlegriaEmbotelladaWinFromApp.Login
         {
             Formulario.Formulario from = new Formulario.Formulario();
             from.Show();
+
+            this.Hide();
+            
         }
 
     }

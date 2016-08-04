@@ -1,4 +1,5 @@
-﻿using BusinessLogic;
+﻿using AlegriaEmbotelladaWinFromApp.Login;
+using BusinessLogic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,6 +35,8 @@ namespace AlegriaEmbotelladaWinFromApp.Formulario
         #region Botón Cancelar
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
+            Form_Login from = new Form_Login();
+            from.Show();
             this.Close();
         }
         #endregion
