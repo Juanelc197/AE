@@ -45,7 +45,7 @@ namespace AlegriaEmbotelladaWinFromApp.Login
             }
             else
             {
-                MessageBox.Show(mensaje);
+                MessageBox.Show(mensaje, "¡ATENCIÓN!", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 clean();
             }
         }

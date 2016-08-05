@@ -28,8 +28,28 @@ namespace DataAcces
                     return false;
                 }
             }
-        }   
+        }
         #endregion
+
+        #region Validar Password y NameNick Formulario
+        public static bool validarPasswordyNameNickFormulario(string password, string user)
+        {
+            using (AlegriaEmbotelladaEntities bd = new AlegriaEmbotelladaEntities())
+            {
+                var query = (from b in bd.tb_Login
+                             where b.PASSWORD == password || b.UserName == user
+                             select b).Count();
+                if (query > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+            #endregion
 
         #region Insertar Datos 
         public static bool IngresarDatos (tb_Login login)

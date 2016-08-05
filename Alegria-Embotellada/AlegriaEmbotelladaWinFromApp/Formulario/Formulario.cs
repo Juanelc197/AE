@@ -59,7 +59,7 @@ namespace AlegriaEmbotelladaWinFromApp.Formulario
                     int edad = Convert.ToInt32(txtedad.Text);
                     if (edad < 18)
                     {
-                        MessageBox.Show("No puedes registrare eres menor de edad");
+                        MessageBox.Show("Lo sentimos, usted es menor de edad. No puede ser registrado.", "¡ATENCIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         clean();
                     }
 
@@ -79,12 +79,12 @@ namespace AlegriaEmbotelladaWinFromApp.Formulario
                         // Validación para insertar los datos en Sql
                         if (string.IsNullOrEmpty(Logininsertar) && string.IsNullOrEmpty(consumidorinsertar))
                         {
-                            MessageBox.Show("Usted ha quedado registrado correctamente.");
+                            MessageBox.Show("Usted ha quedado registrado correctamente.", "¡BIENVENIDO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             clean();
                         }
                         else
                         {
-                            MessageBox.Show("¡Atención! Compruebe que todos los campos han sido llenados.");
+                            MessageBox.Show("Compruebe que todos los campos han sido llenados correctamente.", "¡ATENCIÓN", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
                         }
                     }
                 }
@@ -93,21 +93,23 @@ namespace AlegriaEmbotelladaWinFromApp.Formulario
                 {
                     if (string.IsNullOrEmpty(mensajeDato))
                     {
-                        MessageBox.Show(mensajeUsuario);
+                        MessageBox.Show(mensajeUsuario, "¡ATENCIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        MessageBox.Show(mensajeDato);
+                        MessageBox.Show(mensajeDato, "¡ATENCIÓN!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+
+
                     
                     
-                    clean();
+                    
                 }
             }
             //Excepción para el campos de la Edad
             catch (FormatException)
             {
-                MessageBox.Show("El campo Edad no admite letras");
+                MessageBox.Show("El campo Edad no admite letras.", "¡ATENCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 clean();
             }
         }

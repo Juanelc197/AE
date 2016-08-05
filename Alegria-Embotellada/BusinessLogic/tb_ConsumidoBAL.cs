@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace BusinessLogic
 {
@@ -77,14 +77,14 @@ namespace BusinessLogic
                     {
                         if (IsLetters(name) || IsLetters(lastname))
                         {
-                            mensaje = "Favor de introducir solo Letras en Los campos de Nombre y Apellido";
+                            mensaje = "Favor de introducir solo letras en los campos de Nombre y Apellido.";
                         }
                         else
                         {
                             //Validación de Email
                             if (!IsValidEmail(email))
                             {
-                                mensaje = "El usuario no contiene el formato deseado,Favor d introducir formato correcto";
+                                mensaje = "La dirección de correo electrónico no es válida. Introduzca una distinta. ";
                             }
                             else
                             {
@@ -93,7 +93,7 @@ namespace BusinessLogic
 
                                 if (isExiste)
                                 {
-                                    mensaje = "¡ATENCIÓN! El nombre de usuario ya existe. Favor de introducir uno distinto.";
+                                    mensaje = "El nombre de usuario ya existe. Favor de introducir uno distinto.";
                                 }
                                 else
                                 {
@@ -121,7 +121,7 @@ namespace BusinessLogic
             }
             catch
             {
-                return true;
+                return false;
             }
         }
         public static bool IsLetters(string name)

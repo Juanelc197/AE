@@ -67,7 +67,7 @@ namespace BusinessLogic
                     }
                     else
                     {
-                        mensaje = "Este usuario no existe o es incorrecto. Favor de verificarlo. ";
+                        mensaje = "El usuario no existe o los datos son incorrectos. Favor de verificarlo. ";
                     }
                 }
             }
@@ -89,11 +89,11 @@ namespace BusinessLogic
             {      
                     //Validación para si Los campos no estan vaciós
                      //Validación si  Existen los campos en el Formulario
-                        isExiste = tb_LoginDAL.validarPasswordyNameNick(pass, user);
+                        isExiste = tb_LoginDAL.validarPasswordyNameNickFormulario(pass, user);
 
                         if (isExiste)
                         {
-                            mensaje = "¡ATENCIÓN! El nombre de usuario ya existe. Favor de introducir uno distinto.";
+                            mensaje = "El nombre de usuario ya existe. Favor de introducir uno distinto.";
                         }
                         else
                         {
