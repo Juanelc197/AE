@@ -287,7 +287,7 @@ setInterval('stepthrough()', speed);
                         <!-- TemplateParam name="SubmitLabel" type="text" value="Submit" -->
 
                         <body class="sub">
-                            <form id="form1" runat="server">
+                            <form name="@@(FormName)@@" method="@@(FormMethod)@@" action="@@(FormAction)@@">
                                 <table width="90%" border="0" cellpadding="8">
                                     <tr>
                                         <td colspan="3" class="HeaderColor">
@@ -431,8 +431,11 @@ setInterval('stepthrough()', speed);
                                         </td>
                                         <td colspan="2">
                                             <br />
-                                            <div align="center">&nbsp;<asp:Button ID="Button1" runat="server" Text="Registrar" />
-&nbsp;</div>
+                                            <div align="center"><input type="submit"  name="SubmitName" value="Registrar"/>
+                                                
+                                                
+
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr style="vertical-align: top">
