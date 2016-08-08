@@ -298,48 +298,45 @@ setInterval('stepthrough()', speed);
                                     </tr>
                                     <tr style="vertical-align: top">
                                         <td style="text-align: right" class="LabelColor" nowrap>
-                                            <label for="username"><!-- TemplateBeginEditable name="Label1" --> <!--User Name*--><!-- TemplateEndEditable --></label>
+                                            <!-- TemplateBeginEditable name="Label1" --> <!--User Name*--><!-- TemplateEndEditable -->
                                         </td>
                                         <td colspan="2" class="TitleColor">
                                             <!-- TemplateBeginEditable name="Value1" -->
                                             <label for="username">Nombre de usuario: </label>
-                                            <input type="text" id="username" name="txtusuario">
-                                            <br>
+                                            <asp:TextBox ID="TextBox7" runat="server" Width="153px"></asp:TextBox>
+&nbsp;<br>
                                             <span class="small">*Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</span><!-- TemplateEndEditable -->
                                         </td>
                                     </tr>
                                     <tr style="vertical-align: top">
                                         <td style="text-align: right" class="LabelColor">
-                                            <label for="password"><!-- TemplateBeginEditable name="Label2" --> <!--Contrase�a--><!-- TemplateEndEditable --></label>
+                                            <!-- TemplateBeginEditable name="Label2" --> <!--Contrase�a--><!-- TemplateEndEditable -->
                                         </td>
                                         <td colspan="2" class="TitleColor">
                                             <!-- TemplateBeginEditable name="Value2" -->
                                             <label for="password">
                                                 <br>
-                                                Contrase�a:
+                                                Contrasea:
                                             </label>
-                                            <input type="text" id="password" name="txtPassword">
-                                            <!-- TemplateEndEditable -->
-                                        </td>
+                                            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+&nbsp;<!-- TemplateEndEditable --></td>
                                     </tr>
                                     <tr style="vertical-align: top">
                                         <td style="text-align: right" class="LabelColor">
-                                            <label for="confirmpassword">
                                                 <!-- TemplateBeginEditable name="Label3" -->
                                                 <!--Confirmar<br>
                                                 contrase�a*-->
                                                 <!-- TemplateEndEditable -->
-                                            </label>
                                         </td>
                                         <td colspan="2" class="TitleColor">
                                             <!-- TemplateBeginEditable name="Value3" -->
                                             <label for="confirmpassword">
                                                 <br>
                                                 Confirmar
-                                                contrase�a:
+                                                contrasea:
                                             </label>
-                                            <input type="text" id="confirmpassword" name="txtconfirmarpassword">
-                                            <br>
+                                            <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+&nbsp;<br>
                                         </td>
                                     </tr>
                                     <tr style="vertical-align: top">
@@ -348,36 +345,28 @@ setInterval('stepthrough()', speed);
                                         </td>
                                         <td width="43%" class="TitleColor">
                                             <!-- TemplateBeginEditable name="Value4" -->
-                                            <label for="first">
                                                 <br>
                                                 Nombre(s):
-                                            </label>
-                                            <input type="text" id="first" name="txtnombre">
-                                            <!-- TemplateEndEditable -->
-                                        </td>
+                                            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+&nbsp;<!-- TemplateEndEditable --></td>
                                         <td width="46%" class="TitleColor">
-                                            <!-- TemplateBeginEditable name="Value4_2" -->        <label for="last">
+                                            <!-- TemplateBeginEditable name="Value4_2" -->        
                                                 <br>
                                                 Apellido:(s):
-                                            </label>
-
-                                            <input type="text" id="last" name="txtapellido">
-                                            <!-- TemplateEndEditable -->
-                                        </td>
+                                            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+&nbsp;<!-- TemplateEndEditable --></td>
                                     </tr>
                                     <tr style="vertical-align: top">
                                         <td style="text-align: right" class="LabelColor">
-                                            <label for="email"><!-- TemplateBeginEditable name="Label5" --><!-- Correo--><!-- TemplateEndEditable --></label>
+                                            <!-- TemplateBeginEditable name="Label5" --><!-- Correo--><!-- TemplateEndEditable -->
                                         </td>
                                         <td colspan="2" class="TitleColor">
                                             <!-- TemplateBeginEditable name="Value5" -->
                                             <label for="last">
                                                 <br>
                                                 Correo:
-                                            </label>
-                                            <input type="text" id="email" name="txtemail" size="50">
-                                            <!-- TemplateEndEditable -->
-                                        </td>
+                                            </label>&nbsp;<asp:TextBox ID="TextBox1" runat="server" Width="304px"></asp:TextBox>
+&nbsp;<!-- TemplateEndEditable --></td>
                                     </tr>
                                     <tr style="vertical-align: top">
                                         <td style="text-align: right" class="LabelColor">
@@ -399,9 +388,9 @@ setInterval('stepthrough()', speed);
                                                 <tr style="text-align: left">
                                                     <td class="TitleColor">
                                                         <br>
-                                                        <label for="day0">Edad </label>
-                                                        <input type="text" id="day0" name="textfield11" size="2">
-                                                    </td>
+                                                        Edad 
+                                                        <asp:TextBox ID="TextBox2" runat="server" Width="19px"></asp:TextBox>
+&nbsp;</td>
                                                 </tr>
                                             </table>
                                             <!-- TemplateEndEditable -->
