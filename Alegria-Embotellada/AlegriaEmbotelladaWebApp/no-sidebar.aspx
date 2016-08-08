@@ -260,9 +260,9 @@ setInterval('stepthrough()', speed);
                                 <li><a href="#">Veroeros feugiat</a></li>
                             </ul>
                         </li>-->
-                        <li><a href="left-sidebar.html">Left Sidebar</a></li>
+                     
                         <li><a href="right-sidebar.html">Descargar</a></li>
-                        <li><a href="no-sidebar.html">Registro</a></li>
+                       
                     </ul>
                 </nav>
 
