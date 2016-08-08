@@ -1,4 +1,9 @@
-ï»¿<!DOCTYPE HTML>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="no-sidebar.aspx.cs" Inherits="AlegriaEmbotelladaWebApp.no_sidebar" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML>
 
 <html>
 <head>
@@ -68,7 +73,7 @@
         <!-- fuegos artificiales -->
         <!-- fuegos artificiales -->
         <!-- fuegos artificiales -->
-      <!--  <script type="text/javascript">
+        <script type="text/javascript">
 
 
 
@@ -76,7 +81,7 @@
 
 //<![CDATA[
 var bits=100; // cuantos bits
-var intensity=7; // que tan "poderosa" es la explosiÃ³n. (recomendado entre 3 y 10)
+var intensity=7; // que tan "poderosa" es la explosión. (recomendado entre 3 y 10)
 var speed=20; // rapidez (a menor numero, mas rapido)
 var colours=new Array("#03f", "#f03", "#0e0", "#93f", "#0cc", "#f93");
 //azul rojo verde purpura cyan, naranjo
@@ -220,7 +225,7 @@ launch();
 setInterval('stepthrough()', speed);
 }}
 //]]>
-        </script>-->
+        </script>
         <!-- fuegos artificiales -->
         <!-- fuegos artificiales -->
         <!-- fuegos artificiales -->
@@ -255,8 +260,8 @@ setInterval('stepthrough()', speed);
                                 <li><a href="#">Veroeros feugiat</a></li>
                             </ul>
                         </li>-->
-
-                        <li><a href="https://drive.google.com/folderview?id=0B7TsYLv1t1dXVVA4Qi1nWHdfNFE&usp=sharing">Descargar</a></li>
+                        <li><a href="left-sidebar.html">Left Sidebar</a></li>
+                        <li><a href="right-sidebar.html">Descargar</a></li>
                         <li><a href="no-sidebar.html">Registro</a></li>
                     </ul>
                 </nav>
@@ -305,13 +310,13 @@ setInterval('stepthrough()', speed);
                                     </tr>
                                     <tr style="vertical-align: top">
                                         <td style="text-align: right" class="LabelColor">
-                                            <label for="password"><!-- TemplateBeginEditable name="Label2" --> <!--ContraseÃ±a--><!-- TemplateEndEditable --></label>
+                                            <label for="password"><!-- TemplateBeginEditable name="Label2" --> <!--Contraseña--><!-- TemplateEndEditable --></label>
                                         </td>
                                         <td colspan="2" class="TitleColor">
                                             <!-- TemplateBeginEditable name="Value2" -->
                                             <label for="password">
                                                 <br>
-                                                ContraseÃ±a:
+                                                Contraseña:
                                             </label>
                                             <input type="text" id="password" name="txtPassword">
                                             <!-- TemplateEndEditable -->
@@ -322,7 +327,7 @@ setInterval('stepthrough()', speed);
                                             <label for="confirmpassword">
                                                 <!-- TemplateBeginEditable name="Label3" -->
                                                 <!--Confirmar<br>
-                                                contraseÃ±a*-->
+                                                contraseña*-->
                                                 <!-- TemplateEndEditable -->
                                             </label>
                                         </td>
@@ -331,7 +336,7 @@ setInterval('stepthrough()', speed);
                                             <label for="confirmpassword">
                                                 <br>
                                                 Confirmar
-                                                contraseÃ±a:
+                                                contraseña:
                                             </label>
                                             <input type="text" id="confirmpassword" name="txtconfirmarpassword">
                                             <br>
@@ -426,7 +431,11 @@ setInterval('stepthrough()', speed);
                                         </td>
                                         <td colspan="2">
                                             <br />
-                                            <div align="center"><input type="submit" name="SubmitName" value="Registrar"></div>
+                                            <div align="center"><input type="submit"  name="SubmitName" value="Registrar"/>
+                                                
+                                                
+
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr style="vertical-align: top">
@@ -542,7 +551,8 @@ setInterval('stepthrough()', speed);
 
 
 </body>
-</html>v>
+</html>
 
 
-	</body>
+	
+

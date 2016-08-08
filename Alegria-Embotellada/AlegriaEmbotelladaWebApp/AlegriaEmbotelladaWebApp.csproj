@@ -172,6 +172,7 @@
     <Content Include="js\skel-layers.min.js" />
     <Content Include="js\skel.min.js" />
     <Content Include="left-sidebar.html" />
+    <Content Include="no-sidebar.aspx" />
     <Content Include="no-sidebar.html" />
     <Content Include="right-sidebar.html" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
@@ -193,6 +194,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="no-sidebar.aspx.cs">
+      <DependentUpon>no-sidebar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="no-sidebar.aspx.designer.cs">
+      <DependentUpon>no-sidebar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
