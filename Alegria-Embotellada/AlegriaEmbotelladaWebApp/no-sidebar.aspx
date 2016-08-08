@@ -303,9 +303,8 @@ setInterval('stepthrough()', speed);
                                         <td colspan="2" class="TitleColor">
                                             <!-- TemplateBeginEditable name="Value1" -->
                                             <label for="username">Nombre de usuario: </label>
-                                            <asp:TextBox ID="TextBox7" runat="server" Width="153px"></asp:TextBox>
+                                            <asp:TextBox ID="txtusuario" runat="server" Width="261px"></asp:TextBox>
 &nbsp;<br>
-                                            <span class="small">*Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</span><!-- TemplateEndEditable -->
                                         </td>
                                     </tr>
                                     <tr style="vertical-align: top">
@@ -318,7 +317,7 @@ setInterval('stepthrough()', speed);
                                                 <br>
                                                 Contrasea:
                                             </label>
-                                            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="txtpassword" Type ="password" runat="server"></asp:TextBox>
 &nbsp;<!-- TemplateEndEditable --></td>
                                     </tr>
                                     <tr style="vertical-align: top">
@@ -326,34 +325,19 @@ setInterval('stepthrough()', speed);
                                                 <!-- TemplateBeginEditable name="Label3" -->
                                                 <!--Confirmar<br>
                                                 contrase�a*-->
-                                                <!-- TemplateEndEditable -->
-                                        </td>
-                                        <td colspan="2" class="TitleColor">
-                                            <!-- TemplateBeginEditable name="Value3" -->
-                                            <label for="confirmpassword">
-                                                <br>
-                                                Confirmar
-                                                contrasea:
-                                            </label>
-                                            <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-&nbsp;<br>
-                                        </td>
-                                    </tr>
-                                    <tr style="vertical-align: top">
-                                        <td style="text-align: right" class="LabelColor">
-                                            <!-- TemplateBeginEditable name="Label4" --> <!--Nombre--><!-- TemplateEndEditable -->
+                                                <!-- TemplateEndEditable -->                                 
                                         </td>
                                         <td width="43%" class="TitleColor">
                                             <!-- TemplateBeginEditable name="Value4" -->
-                                                <br>
+                                               <br>
                                                 Nombre(s):
-                                            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="txtnombre" runat="server"></asp:TextBox>
 &nbsp;<!-- TemplateEndEditable --></td>
                                         <td width="46%" class="TitleColor">
                                             <!-- TemplateBeginEditable name="Value4_2" -->        
                                                 <br>
                                                 Apellido:(s):
-                                            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="txtapellido" runat="server"></asp:TextBox>
 &nbsp;<!-- TemplateEndEditable --></td>
                                     </tr>
                                     <tr style="vertical-align: top">
@@ -365,7 +349,7 @@ setInterval('stepthrough()', speed);
                                             <label for="last">
                                                 <br>
                                                 Correo:
-                                            </label>&nbsp;<asp:TextBox ID="TextBox1" runat="server" Width="304px"></asp:TextBox>
+                                            </label>&nbsp;<asp:TextBox ID="txtemail" runat="server" Width="304px"></asp:TextBox>
 &nbsp;<!-- TemplateEndEditable --></td>
                                     </tr>
                                     <tr style="vertical-align: top">
@@ -388,9 +372,9 @@ setInterval('stepthrough()', speed);
                                                 <tr style="text-align: left">
                                                     <td class="TitleColor">
                                                         <br>
-                                                        Edad 
-                                                        <asp:TextBox ID="TextBox2" runat="server" Width="19px"></asp:TextBox>
-&nbsp;</td>
+                                                        Edad
+                                                        <asp:TextBox ID="txtEdad" runat="server" Width="91px"></asp:TextBox>
+&nbsp;</td>                
                                                 </tr>
                                             </table>
                                             <!-- TemplateEndEditable -->
@@ -420,7 +404,7 @@ setInterval('stepthrough()', speed);
                                         </td>
                                         <td colspan="2">
                                             <br />
-                                            <div align="center">&nbsp;<asp:Button ID="Button1" runat="server" Text="Registrar" />
+                                            <div align="center" >&nbsp;<asp:Button  ID="Button1" runat="server" Text="Registrar" OnClick="Button1_Click" />
 &nbsp;</div>
                                         </td>
                                     </tr>
@@ -449,21 +433,16 @@ setInterval('stepthrough()', speed);
                     <div class="4u">
                         <section>
                             <header class="major">
-                                <h2>Donec dictum metus</h2>
-                                <span class="byline">Mattis wisi maecenas ligula</span>
+                                <h2>Alegria Embotellada</h2>
+                                <br />
+                                Empresa Psycho Pro
                             </header>
                             <ul class="contact">
                                 <li>
-                                    <span class="address">Address</span>
-                                    <span>1234 Somewhere Road #4285 <br />Nashville, TN 00000</span>
-                                </li>
+                                    Correo <span><a href="#">Pysco_AlegriaEmbotellada@PyschoPro.tld</a></span></li>
                                 <li>
-                                    <span class="mail">Mail</span>
-                                    <span><a href="#">someone@untitled.tld</a></span>
-                                </li>
-                                <li>
-                                    <span class="phone">Phone</span>
-                                    <span>(000) 000-0000</span>
+                                    Telefono
+                                    <span>(51)5562586</span>
                                 </li>
                             </ul>
                         </section>
