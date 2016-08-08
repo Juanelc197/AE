@@ -261,7 +261,7 @@ setInterval('stepthrough()', speed);
                             </ul>
                         </li>-->
                      
-                        <li><a href="right-sidebar.html">Descargar</a></li>
+                        <li><a href="https://drive.google.com/folderview?id=0B7TsYLv1t1dXVVA4Qi1nWHdfNFE&usp=sharing">Descargar</a></li>
                        
                     </ul>
                 </nav>
