@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="no-sidebar.aspx.cs" Inherits="AlegriaEmbotelladaWebApp.no_sidebar" %>
+ï»¿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="no-sidebar.aspx.cs" Inherits="AlegriaEmbotelladaWebApp.no_sidebar" %>
 
 <!DOCTYPE html>
 
@@ -81,7 +81,7 @@
 
 //<![CDATA[
 var bits=100; // cuantos bits
-var intensity=7; // que tan "poderosa" es la explosión. (recomendado entre 3 y 10)
+var intensity=7; // que tan "poderosa" es la explosiï¿½n. (recomendado entre 3 y 10)
 var speed=20; // rapidez (a menor numero, mas rapido)
 var colours=new Array("#03f", "#f03", "#0e0", "#93f", "#0cc", "#f93");
 //azul rojo verde purpura cyan, naranjo
@@ -287,7 +287,7 @@ setInterval('stepthrough()', speed);
                         <!-- TemplateParam name="SubmitLabel" type="text" value="Submit" -->
 
                         <body class="sub">
-                            <form name="@@(FormName)@@" method="@@(FormMethod)@@" action="@@(FormAction)@@">
+                            <form id="form1" runat="server">
                                 <table width="90%" border="0" cellpadding="8">
                                     <tr>
                                         <td colspan="3" class="HeaderColor">
@@ -310,13 +310,13 @@ setInterval('stepthrough()', speed);
                                     </tr>
                                     <tr style="vertical-align: top">
                                         <td style="text-align: right" class="LabelColor">
-                                            <label for="password"><!-- TemplateBeginEditable name="Label2" --> <!--Contraseña--><!-- TemplateEndEditable --></label>
+                                            <label for="password"><!-- TemplateBeginEditable name="Label2" --> <!--Contraseï¿½a--><!-- TemplateEndEditable --></label>
                                         </td>
                                         <td colspan="2" class="TitleColor">
                                             <!-- TemplateBeginEditable name="Value2" -->
                                             <label for="password">
                                                 <br>
-                                                Contraseña:
+                                                Contraseï¿½a:
                                             </label>
                                             <input type="text" id="password" name="txtPassword">
                                             <!-- TemplateEndEditable -->
@@ -327,7 +327,7 @@ setInterval('stepthrough()', speed);
                                             <label for="confirmpassword">
                                                 <!-- TemplateBeginEditable name="Label3" -->
                                                 <!--Confirmar<br>
-                                                contraseña*-->
+                                                contraseï¿½a*-->
                                                 <!-- TemplateEndEditable -->
                                             </label>
                                         </td>
@@ -336,7 +336,7 @@ setInterval('stepthrough()', speed);
                                             <label for="confirmpassword">
                                                 <br>
                                                 Confirmar
-                                                contraseña:
+                                                contraseï¿½a:
                                             </label>
                                             <input type="text" id="confirmpassword" name="txtconfirmarpassword">
                                             <br>
@@ -431,11 +431,8 @@ setInterval('stepthrough()', speed);
                                         </td>
                                         <td colspan="2">
                                             <br />
-                                            <div align="center"><input type="submit"  name="SubmitName" value="Registrar"/>
-                                                
-                                                
-
-                                            </div>
+                                            <div align="center">&nbsp;<asp:Button ID="Button1" runat="server" Text="Registrar" />
+&nbsp;</div>
                                         </td>
                                     </tr>
                                     <tr style="vertical-align: top">
