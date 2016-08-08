@@ -141,87 +141,50 @@
       <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="obj\Debug\TempPE\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="bin\Antlr3.Runtime.dll" />
-    <Content Include="bin\AspNet.ScriptManager.bootstrap.dll" />
-    <Content Include="bin\AspNet.ScriptManager.jQuery.dll" />
-    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
-    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
-    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
-    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
-    <Content Include="bin\Microsoft.AI.Web.dll" />
-    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
-    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
-    <Content Include="bin\Microsoft.AspNet.FriendlyUrls.dll" />
-    <Content Include="bin\Microsoft.AspNet.Web.Optimization.WebForms.dll" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
-    <Content Include="bin\Microsoft.ScriptManager.MSAjax.dll" />
-    <Content Include="bin\Microsoft.ScriptManager.WebForms.dll" />
-    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
-    <Content Include="bin\Newtonsoft.Json.dll" />
-    <Content Include="bin\System.Web.Optimization.dll" />
-    <Content Include="bin\WebGrease.dll" />
-    <Content Include="Contact.aspx" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\ai.0.22.9-build00167.js" />
-    <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\WebForms\DetailsView.js" />
-    <Content Include="Scripts\WebForms\Focus.js" />
-    <Content Include="Scripts\WebForms\GridView.js" />
-    <Content Include="Scripts\WebForms\Menu.js" />
-    <Content Include="Scripts\WebForms\MenuStandards.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
-    <Content Include="Scripts\WebForms\SmartNav.js" />
-    <Content Include="Scripts\WebForms\TreeView.js" />
-    <Content Include="Scripts\WebForms\WebForms.js" />
-    <Content Include="Scripts\WebForms\WebParts.js" />
-    <Content Include="Scripts\WebForms\WebUIValidation.js" />
-    <Content Include="Scripts\_references.js" />
-    <Content Include="Default.aspx" />
-    <Content Include="favicon.ico" />
-    <Content Include="Global.asax" />
-    <Content Include="Site.Master" />
-    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\ie\html5shiv.js" />
+    <Content Include="css\ie\v8.css" />
+    <Content Include="css\images\arrow.png" />
+    <Content Include="css\skel.css" />
+    <Content Include="css\style-mobile.css" />
+    <Content Include="css\style-narrow.css" />
+    <Content Include="css\style-narrower.css" />
+    <Content Include="css\style-normal.css" />
+    <Content Include="css\style-wide.css" />
+    <Content Include="css\style.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="images\Captura de pantalla %2876%29.png" />
+    <Content Include="images\Captura de pantalla %2877%29.png" />
+    <Content Include="images\Captura de pantalla %2878%29.png" />
+    <Content Include="images\pic01.jpg" />
+    <Content Include="images\pic02.png" />
+    <Content Include="index.html" />
+    <Content Include="ir-arriba\arribaa.js" />
+    <Content Include="ir-arriba\estiloss.css" />
+    <Content Include="ir-arriba\fontss.css" />
+    <Content Include="ir-arriba\fonts\icomoon.svg" />
+    <Content Include="ir-arriba\jquery-latest.js" />
+    <Content Include="js\init.js" />
+    <Content Include="js\jquery.dropotron.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\skel-layers.min.js" />
+    <Content Include="js\skel.min.js" />
+    <Content Include="left-sidebar.html" />
+    <Content Include="no-sidebar.html" />
+    <Content Include="right-sidebar.html" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
-    <Content Include="Bundle.config" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="ir-arriba\fonts\icomoon.eot" />
+    <Content Include="ir-arriba\fonts\icomoon.ttf" />
+    <Content Include="ir-arriba\fonts\icomoon.woff" />
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Site.Mobile.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -230,57 +193,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.designer.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
